@@ -5854,6 +5854,3419 @@ function dispatch(state) {
 
 /***/ }),
 
+/***/ "Wqdl":
+/*!*************************************************************!*\
+  !*** ./node_modules/ngx-qr/__ivy_ngcc__/fesm2015/ngx-qr.js ***!
+  \*************************************************************/
+/*! exports provided: NgQrScannerModule, QrScannerComponent, ɵa */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NgQrScannerModule", function() { return NgQrScannerModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QrScannerComponent", function() { return QrScannerComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵa", function() { return QrUploadComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "vwVJ");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "qCKp");
+
+
+
+
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+
+
+const _c0 = ["videoWrapper"];
+const _c1 = ["qrCanvas"];
+function QrScannerComponent_div_3_div_3_div_1_Template(rf, ctx) { if (rf & 1) {
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "button", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QrScannerComponent_div_3_div_3_div_1_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); const device_r5 = ctx.$implicit; const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r7.changeCamera(device_r5); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const device_r5 = ctx.$implicit;
+    const i_r6 = ctx.index;
+    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", ctx_r4.buttonClass);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx_r4.getLabel(device_r5, i_r6 + 1), " ");
+} }
+function QrScannerComponent_div_3_div_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, QrScannerComponent_div_3_div_3_div_1_Template, 3, 2, "div", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r3.cameraList);
+} }
+const _c2 = function (a0) { return { display: a0 }; };
+function QrScannerComponent_div_3_Template(rf, ctx) { if (rf & 1) {
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "app-qrupload", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("error", function QrScannerComponent_div_3_Template_app_qrupload_error_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r9.onUploadError($event); })("valueChange", function QrScannerComponent_div_3_Template_app_qrupload_valueChange_2_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r10); const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r11.scanned($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, QrScannerComponent_div_3_div_3_Template, 2, 1, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](4, _c2, ctx_r0.state === ctx_r0.State.SelectCamera ? "block" : "none"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("title", ctx_r0.texts.OpenButtonText)("buttonClass", ctx_r0.buttonClass);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r0.disableScan);
+} }
+const _c3 = function (a0, a1) { return { "maxWidth.px": a0, "maxHeight.px": a1 }; };
+class AlignmentPattern {
+    constructor(posX, posY, estimatedModuleSize) {
+        this.count = 1;
+        this.incrementCount = function () {
+            this.count++;
+        };
+        this.aboutEquals = function (moduleSize, i, j) {
+            if (Math.abs(i - this.y) <= moduleSize && Math.abs(j - this.x) <= moduleSize) {
+                const moduleSizeDiff = Math.abs(moduleSize - this.estimatedModuleSize);
+                return moduleSizeDiff <= 1.0 || moduleSizeDiff / this.estimatedModuleSize <= 1.0;
+            }
+            return false;
+        };
+        this.x = posX;
+        this.y = posY;
+        this.estimatedModuleSize = estimatedModuleSize;
+    }
+    get EstimatedModuleSize() {
+        return this.estimatedModuleSize;
+    }
+    get Count() {
+        return this.count;
+    }
+    get X() {
+        return Math.floor(this.x);
+    }
+    get Y() {
+        return Math.floor(this.y);
+    }
+}
+class AlignmentPatternFinder {
+    constructor(image, startX, startY, width, height, moduleSize, imageWidth, imageHeight, resultPointCallback) {
+        this.possibleCenters = new Array();
+        this.crossCheckStateCount = new Array(0, 0, 0);
+        this.centerFromEnd = function (stateCount, end) {
+            return (end - stateCount[2]) - stateCount[1] / 2.0;
+        };
+        this.foundPatternCross = function (stateCount) {
+            const moduleSize = this.moduleSize;
+            const maxVariance = moduleSize / 2.0;
+            for (let i = 0; i < 3; i++) {
+                if (Math.abs(moduleSize - stateCount[i]) >= maxVariance) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        this.crossCheckVertical = function (startI, centerJ, maxCount, originalStateCountTotal) {
+            const image = this.image;
+            const maxI = this.imageHeight;
+            const stateCount = this.crossCheckStateCount;
+            stateCount[0] = 0;
+            stateCount[1] = 0;
+            stateCount[2] = 0;
+            // Start counting up from center
+            let i = startI;
+            while (i >= 0 && image[centerJ + i * this.imageWidth] && stateCount[1] <= maxCount) {
+                stateCount[1]++;
+                i--;
+            }
+            // If already too many modules in this state or ran off the edge:
+            if (i < 0 || stateCount[1] > maxCount) {
+                return NaN;
+            }
+            while (i >= 0 && !image[centerJ + i * this.imageWidth] && stateCount[0] <= maxCount) {
+                stateCount[0]++;
+                i--;
+            }
+            if (stateCount[0] > maxCount) {
+                return NaN;
+            }
+            // Now also count down from center
+            i = startI + 1;
+            while (i < maxI && image[centerJ + i * this.imageWidth] && stateCount[1] <= maxCount) {
+                stateCount[1]++;
+                i++;
+            }
+            if (i == maxI || stateCount[1] > maxCount) {
+                return NaN;
+            }
+            while (i < maxI && !image[centerJ + i * this.imageWidth] && stateCount[2] <= maxCount) {
+                stateCount[2]++;
+                i++;
+            }
+            if (stateCount[2] > maxCount) {
+                return NaN;
+            }
+            const stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2];
+            if (5 * Math.abs(stateCountTotal - originalStateCountTotal) >= 2 * originalStateCountTotal) {
+                return NaN;
+            }
+            return this.foundPatternCross(stateCount) ? this.centerFromEnd(stateCount, i) : NaN;
+        };
+        this.handlePossibleCenter = function (stateCount, i, j) {
+            const stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2];
+            const centerJ = this.centerFromEnd(stateCount, j);
+            const centerI = this.crossCheckVertical(i, Math.floor(centerJ), 2 * stateCount[1], stateCountTotal);
+            if (!isNaN(centerI)) {
+                const estimatedModuleSize = (stateCount[0] + stateCount[1] + stateCount[2]) / 3.0;
+                const max = this.possibleCenters.length;
+                for (let index = 0; index < max; index++) {
+                    const center = this.possibleCenters[index];
+                    // Look for about the same center and module size:
+                    if (center.aboutEquals(estimatedModuleSize, centerI, centerJ)) {
+                        return new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
+                    }
+                }
+                // Hadn't found this before; save it
+                const point = new AlignmentPattern(centerJ, centerI, estimatedModuleSize);
+                this.possibleCenters.push(point);
+                if (this.resultPointCallback != null) {
+                    this.resultPointCallback.foundPossibleResultPoint(point);
+                }
+            }
+            return null;
+        };
+        this.find = function () {
+            const startX = this.startX;
+            const height = this.height;
+            const maxJ = startX + this.width;
+            const middleI = this.startY + (height >> 1);
+            // We are looking for black/white/black modules in 1:1:1 ratio;
+            // this tracks the number of black/white/black modules seen so far
+            const stateCount = new Array(0, 0, 0);
+            for (let iGen = 0; iGen < height; iGen++) {
+                // Search from middle outwards
+                const i = middleI + ((iGen & 0x01) == 0 ? ((iGen + 1) >> 1) : -((iGen + 1) >> 1));
+                stateCount[0] = 0;
+                stateCount[1] = 0;
+                stateCount[2] = 0;
+                let j = startX;
+                // Burn off leading white pixels before anything else; if we start in the middle of
+                // a white run, it doesn't make sense to count its length, since we don't know if the
+                // white run continued to the left of the start point
+                while (j < maxJ && !this.image[j + this.imageWidth * i]) {
+                    j++;
+                }
+                let currentState = 0;
+                while (j < maxJ) {
+                    if (this.image[j + i * this.imageWidth]) {
+                        // Black pixel
+                        if (currentState == 1) {
+                            // Counting black pixels
+                            stateCount[currentState]++;
+                        }
+                        else {
+                            // Counting white pixels
+                            if (currentState == 2) {
+                                // A winner?
+                                if (this.foundPatternCross(stateCount)) {
+                                    // Yes
+                                    const confirmed = this.handlePossibleCenter(stateCount, i, j);
+                                    if (confirmed != null) {
+                                        return confirmed;
+                                    }
+                                }
+                                stateCount[0] = stateCount[2];
+                                stateCount[1] = 1;
+                                stateCount[2] = 0;
+                                currentState = 1;
+                            }
+                            else {
+                                stateCount[++currentState]++;
+                            }
+                        }
+                    }
+                    else {
+                        // White pixel
+                        if (currentState == 1) {
+                            // Counting black pixels
+                            currentState++;
+                        }
+                        stateCount[currentState]++;
+                    }
+                    j++;
+                }
+                if (this.foundPatternCross(stateCount)) {
+                    const confirmed = this.handlePossibleCenter(stateCount, i, maxJ);
+                    if (confirmed != null) {
+                        return confirmed;
+                    }
+                }
+            }
+            // Hmm, nothing we saw was observed and confirmed twice. If we had
+            // any guess at all, return it.
+            if (!(this.possibleCenters.length == 0)) {
+                return this.possibleCenters[0];
+            }
+            throw new Error(`Couldn't find enough alignment patterns`);
+        };
+        this.image = image;
+        this.startX = startX;
+        this.startY = startY;
+        this.width = width;
+        this.height = height;
+        this.moduleSize = moduleSize;
+        this.resultPointCallback = resultPointCallback;
+        this.imageWidth = imageWidth;
+        this.imageHeight = imageHeight;
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class PerspectiveTransform {
+    constructor(a11, a21, a31, a12, a22, a32, a13, a23, a33) {
+        this.transformPoints1 = function (points) {
+            const max = points.length;
+            const a11 = this.a11;
+            const a12 = this.a12;
+            const a13 = this.a13;
+            const a21 = this.a21;
+            const a22 = this.a22;
+            const a23 = this.a23;
+            const a31 = this.a31;
+            const a32 = this.a32;
+            const a33 = this.a33;
+            for (let i = 0; i < max; i += 2) {
+                const x = points[i];
+                const y = points[i + 1];
+                const denominator = a13 * x + a23 * y + a33;
+                points[i] = (a11 * x + a21 * y + a31) / denominator;
+                points[i + 1] = (a12 * x + a22 * y + a32) / denominator;
+            }
+        };
+        this.transformPoints2 = function (xValues, yValues) {
+            const n = xValues.length;
+            for (let i = 0; i < n; i++) {
+                const x = xValues[i];
+                const y = yValues[i];
+                const denominator = this.a13 * x + this.a23 * y + this.a33;
+                xValues[i] = (this.a11 * x + this.a21 * y + this.a31) / denominator;
+                yValues[i] = (this.a12 * x + this.a22 * y + this.a32) / denominator;
+            }
+        };
+        this.buildAdjoint = function () {
+            // Adjoint is the transpose of the cofactor matrix:
+            return new PerspectiveTransform(this.a22 * this.a33 - this.a23 * this.a32, this.a23 * this.a31 - this.a21 * this.a33, this.a21 * this.a32 - this.a22 * this.a31, this.a13 * this.a32 - this.a12 * this.a33, this.a11 * this.a33 - this.a13 * this.a31, this.a12 * this.a31 - this.a11 * this.a32, this.a12 * this.a23 - this.a13 * this.a22, this.a13 * this.a21 - this.a11 * this.a23, this.a11 * this.a22 - this.a12 * this.a21);
+        };
+        this.times = function (other) {
+            return new PerspectiveTransform(this.a11 * other.a11 + this.a21 * other.a12 + this.a31 * other.a13, this.a11 * other.a21 + this.a21 * other.a22 + this.a31 * other.a23, this.a11 * other.a31 + this.a21 * other.a32 + this.a31 * other.a33, this.a12 * other.a11 + this.a22 * other.a12 + this.a32 * other.a13, this.a12 * other.a21 + this.a22 * other.a22 + this.a32 * other.a23, this.a12 * other.a31 + this.a22 * other.a32 + this.a32 * other.a33, this.a13 * other.a11 + this.a23 * other.a12 + this.a33 * other.a13, this.a13 * other.a21 + this.a23 * other.a22 + this.a33 * other.a23, this.a13 * other.a31 + this.a23 * other.a32 + this.a33 * other.a33);
+        };
+        this.a11 = a11;
+        this.a12 = a12;
+        this.a13 = a13;
+        this.a21 = a21;
+        this.a22 = a22;
+        this.a23 = a23;
+        this.a31 = a31;
+        this.a32 = a32;
+        this.a33 = a33;
+    }
+    static quadrilateralToQuadrilateral(x0, y0, x1, y1, x2, y2, x3, y3, x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p) {
+        const qToS = this.quadrilateralToSquare(x0, y0, x1, y1, x2, y2, x3, y3);
+        const sToQ = this.squareToQuadrilateral(x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p);
+        return sToQ.times(qToS);
+    }
+    static squareToQuadrilateral(x0, y0, x1, y1, x2, y2, x3, y3) {
+        const dy2 = y3 - y2;
+        const dy3 = y0 - y1 + y2 - y3;
+        if (dy2 == 0.0 && dy3 == 0.0) {
+            return new PerspectiveTransform(x1 - x0, x2 - x1, x0, y1 - y0, y2 - y1, y0, 0.0, 0.0, 1.0);
+        }
+        else {
+            const dx1 = x1 - x2;
+            const dx2 = x3 - x2;
+            const dx3 = x0 - x1 + x2 - x3;
+            const dy1 = y1 - y2;
+            const denominator = dx1 * dy2 - dx2 * dy1;
+            const a13 = (dx3 * dy2 - dx2 * dy3) / denominator;
+            const a23 = (dx1 * dy3 - dx3 * dy1) / denominator;
+            return new PerspectiveTransform(x1 - x0 + a13 * x1, x3 - x0 + a23 * x3, x0, y1 - y0 + a13 * y1, y3 - y0 + a23 * y3, y0, a13, a23, 1.0);
+        }
+    }
+    static quadrilateralToSquare(x0, y0, x1, y1, x2, y2, x3, y3) {
+        // Here, the adjoint serves as the inverse:
+        const t = this.squareToQuadrilateral(x0, y0, x1, y1, x2, y2, x3, y3);
+        return t.buildAdjoint();
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class BitMatrix {
+    constructor(width, height) {
+        if (!height) {
+            height = width;
+        }
+        if (width < 1 || height < 1) {
+            throw new Error('Both dimensions must be greater than 0');
+        }
+        this.width = width;
+        this.height = height;
+        this.rowSize = width >> 5;
+        if ((width & 0x1f) != 0) {
+            this.rowSize++;
+        }
+        this.bits = new Array(this.rowSize * height);
+        for (let i = 0; i < this.bits.length; i++) {
+            this.bits[i] = 0;
+        }
+    }
+    get Width() {
+        return this.width;
+    }
+    get Height() {
+        return this.height;
+    }
+    get Dimension() {
+        if (this.width != this.height) {
+            throw new Error('Can\'t call getDimension() on a non-square matrix');
+        }
+        return this.width;
+    }
+    URShift(number, bits) {
+        if (number >= 0) {
+            return number >> bits;
+        }
+        else {
+            return (number >> bits) + (2 << ~bits);
+        }
+    }
+    get_Renamed(x, y) {
+        const offset = y * this.rowSize + (x >> 5);
+        return ((this.URShift(this.bits[offset], (x & 0x1f))) & 1) != 0;
+    }
+    set_Renamed(x, y) {
+        const offset = y * this.rowSize + (x >> 5);
+        this.bits[offset] |= 1 << (x & 0x1f);
+    }
+    flip(x, y) {
+        const offset = y * this.rowSize + (x >> 5);
+        this.bits[offset] ^= 1 << (x & 0x1f);
+    }
+    clear() {
+        const max = this.bits.length;
+        for (let i = 0; i < max; i++) {
+            this.bits[i] = 0;
+        }
+    }
+    setRegion(left, top, width, height) {
+        if (top < 0 || left < 0) {
+            throw new Error('Left and top must be nonnegative');
+        }
+        if (height < 1 || width < 1) {
+            throw new Error('Height and width must be at least 1');
+        }
+        const right = left + width;
+        const bottom = top + height;
+        if (bottom > this.height || right > this.width) {
+            throw new Error('The region must fit inside the matrix');
+        }
+        for (let y = top; y < bottom; y++) {
+            const offset = y * this.rowSize;
+            for (let x = left; x < right; x++) {
+                this.bits[offset + (x >> 5)] |= 1 << (x & 0x1f);
+            }
+        }
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class GridSampler {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    checkAndNudgePoints(image, points) {
+        const width = this.width;
+        const height = this.height;
+        // Check and nudge points from start until we see some that are OK:
+        let nudged = true;
+        for (let offset = 0; offset < points.length && nudged; offset += 2) {
+            const x = Math.floor(points[offset]);
+            const y = Math.floor(points[offset + 1]);
+            if (x < -1 || x > width || y < -1 || y > height) {
+                throw new Error('Error.checkAndNudgePoints ');
+            }
+            nudged = false;
+            if (x === -1) {
+                points[offset] = 0.0;
+                nudged = true;
+            }
+            else if (x === width) {
+                points[offset] = width - 1;
+                nudged = true;
+            }
+            if (y === -1) {
+                points[offset + 1] = 0.0;
+                nudged = true;
+            }
+            else if (y === height) {
+                points[offset + 1] = height - 1;
+                nudged = true;
+            }
+        }
+        // Check and nudge points from end:
+        nudged = true;
+        for (let offset = points.length - 2; offset >= 0 && nudged; offset -= 2) {
+            const x = Math.floor(points[offset]);
+            const y = Math.floor(points[offset + 1]);
+            if (x < -1 || x > width || y < -1 || y > height) {
+                throw new Error('Error.checkAndNudgePoints ');
+            }
+            nudged = false;
+            if (x === -1) {
+                points[offset] = 0.0;
+                nudged = true;
+            }
+            else if (x === width) {
+                points[offset] = width - 1;
+                nudged = true;
+            }
+            if (y === -1) {
+                points[offset + 1] = 0.0;
+                nudged = true;
+            }
+            else if (y === height) {
+                points[offset + 1] = height - 1;
+                nudged = true;
+            }
+        }
+    }
+    sampleGrid3(image, rawImage, dimension, transform) {
+        const bits = new BitMatrix(dimension, dimension);
+        // tslint:disable-next-line: no-bitwise
+        const points = new Array(dimension << 1);
+        for (let y = 0; y < dimension; y++) {
+            const max = points.length;
+            const iValue = y + 0.5;
+            for (let x = 0; x < max; x += 2) {
+                // tslint:disable-next-line: no-bitwise
+                points[x] = (x >> 1) + 0.5;
+                points[x + 1] = iValue;
+            }
+            transform.transformPoints1(points);
+            // Quick check to see if points transformed to something inside the image;
+            // sufficient to check the endpoints
+            this.checkAndNudgePoints(image, points);
+            try {
+                for (let x = 0; x < max; x += 2) {
+                    const xpoint = (Math.floor(points[x]) * 4) + (Math.floor(points[x + 1]) * this.width * 4);
+                    const bit = image[Math.floor(points[x]) + this.width * Math.floor(points[x + 1])];
+                    rawImage.data[xpoint] = bit ? 255 : 0;
+                    rawImage.data[xpoint + 1] = bit ? 255 : 0;
+                    rawImage.data[xpoint + 2] = 0;
+                    rawImage.data[xpoint + 3] = 255;
+                    // bits[x >> 1][ y]=bit;
+                    if (bit) {
+                        // tslint:disable-next-line: no-bitwise
+                        bits.set_Renamed(x >> 1, y);
+                    }
+                }
+            }
+            catch (aioobe) {
+                // This feels wrong, but, sometimes if the finder patterns are misidentified, the resulting
+                // transform gets "twisted" such that it maps a straight line of points to a set of points
+                // whose endpoints are in bounds, but others are not. There is probably some mathematical
+                // way to detect this about the transformation that I don't know yet.
+                // This results in an ugly runtime exception despite our clever checks above -- can't have
+                // that. We could check each point's coordinates but that feels duplicative. We settle for
+                // catching and wrapping ArrayIndexOutOfBoundsException.
+                throw new Error('Error.checkAndNudgePoints');
+            }
+        }
+        return bits;
+    }
+    sampleGridx(image, dimension, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY) {
+        const transform = PerspectiveTransform.quadrilateralToQuadrilateral(p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY);
+        return this.sampleGrid3(image, {}, dimension, transform);
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class ErrorCorrectionLevel {
+    constructor(ordinal, bits, name) {
+        this.ordinal_Renamed_Field = ordinal;
+        this.bits = bits;
+        this.name = name;
+    }
+    get Bits() {
+        return this.bits;
+    }
+    get Name() {
+        return this.name;
+    }
+    static forBits(bits) {
+        if (bits < 0 || bits >= this.FOR_BITS.length) {
+            throw new Error('ArgumentException');
+        }
+        return this.FOR_BITS[bits];
+    }
+    ordinal() {
+        return this.ordinal_Renamed_Field;
+    }
+}
+ErrorCorrectionLevel.L = new ErrorCorrectionLevel(0, 0x01, 'L');
+ErrorCorrectionLevel.M = new ErrorCorrectionLevel(1, 0x00, 'M');
+ErrorCorrectionLevel.Q = new ErrorCorrectionLevel(2, 0x03, 'Q');
+ErrorCorrectionLevel.H = new ErrorCorrectionLevel(3, 0x02, 'H');
+ErrorCorrectionLevel.FOR_BITS = new Array(ErrorCorrectionLevel.M, ErrorCorrectionLevel.L, ErrorCorrectionLevel.H, ErrorCorrectionLevel.Q);
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class FormatInformation {
+    constructor(formatInfo) {
+        this.Equals = function (o) {
+            const other = o;
+            return this.errorCorrectionLevel == other.errorCorrectionLevel && this.dataMask == other.dataMask;
+        };
+        this.errorCorrectionLevel = ErrorCorrectionLevel.forBits((formatInfo >> 3) & 0x03);
+        this.dataMask = (formatInfo & 0x07);
+    }
+    get ErrorCorrectionLevel() {
+        return this.errorCorrectionLevel;
+    }
+    get DataMask() {
+        return this.dataMask;
+    }
+    static URShift(number, bits) {
+        if (number >= 0) {
+            return number >> bits;
+        }
+        else {
+            return (number >> bits) + (2 << ~bits);
+        }
+    }
+    static numBitsDiffering(a, b) {
+        a ^= b; // a now has a 1 bit exactly where its bit differs with b's
+        // Count bits set quickly with a series of lookups:
+        return FormatInformation.BITS_SET_IN_HALF_BYTE[a & 0x0F]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 4) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 8) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 12) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 16) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 20) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 24) & 0x0F)]
+            + FormatInformation.BITS_SET_IN_HALF_BYTE[(this.URShift(a, 28) & 0x0F)];
+    }
+    static decodeFormatInformation(maskedFormatInfo) {
+        const formatInfo = this.doDecodeFormatInformation(maskedFormatInfo);
+        if (formatInfo != null) {
+            return formatInfo;
+        }
+        // Should return null, but, some QR codes apparently
+        // do not mask this info. Try again by actually masking the pattern
+        // first
+        return this.doDecodeFormatInformation(maskedFormatInfo ^ FormatInformation.FORMAT_INFO_MASK_QR);
+    }
+    static doDecodeFormatInformation(maskedFormatInfo) {
+        // Find the int in FORMAT_INFO_DECODE_LOOKUP with fewest bits differing
+        let bestDifference = 0xffffffff;
+        let bestFormatInfo = 0;
+        for (let i = 0; i < FormatInformation.FORMAT_INFO_DECODE_LOOKUP.length; i++) {
+            const decodeInfo = FormatInformation.FORMAT_INFO_DECODE_LOOKUP[i];
+            const targetInfo = decodeInfo[0];
+            if (targetInfo == maskedFormatInfo) {
+                // Found an exact match
+                return new FormatInformation(decodeInfo[1]);
+            }
+            const bitsDifference = FormatInformation.numBitsDiffering(maskedFormatInfo, targetInfo);
+            if (bitsDifference < bestDifference) {
+                bestFormatInfo = decodeInfo[1];
+                bestDifference = bitsDifference;
+            }
+        }
+        // Hamming distance of the 32 masked codes is 7, by construction, so <= 3 bits
+        // differing means we found a match
+        if (bestDifference <= 3) {
+            return new FormatInformation(bestFormatInfo);
+        }
+        return null;
+    }
+    static forBits(bits) {
+        {
+            if (bits < 0 || bits >= FormatInformation.FOR_BITS.length) {
+                throw new Error('ArgumentException');
+            }
+            return FormatInformation.FOR_BITS[bits];
+        }
+    }
+    GetHashCode() {
+        return (this.errorCorrectionLevel.ordinal() << 3) | this.dataMask;
+    }
+}
+FormatInformation.FORMAT_INFO_MASK_QR = 0x5412;
+FormatInformation.FORMAT_INFO_DECODE_LOOKUP = new Array(new Array(0x5412, 0x00), new Array(0x5125, 0x01), new Array(0x5E7C, 0x02), new Array(0x5B4B, 0x03), new Array(0x45F9, 0x04), new Array(0x40CE, 0x05), new Array(0x4F97, 0x06), new Array(0x4AA0, 0x07), new Array(0x77C4, 0x08), new Array(0x72F3, 0x09), new Array(0x7DAA, 0x0A), new Array(0x789D, 0x0B), new Array(0x662F, 0x0C), new Array(0x6318, 0x0D), new Array(0x6C41, 0x0E), new Array(0x6976, 0x0F), new Array(0x1689, 0x10), new Array(0x13BE, 0x11), new Array(0x1CE7, 0x12), new Array(0x19D0, 0x13), new Array(0x0762, 0x14), new Array(0x0255, 0x15), new Array(0x0D0C, 0x16), new Array(0x083B, 0x17), new Array(0x355F, 0x18), new Array(0x3068, 0x19), new Array(0x3F31, 0x1A), new Array(0x3A06, 0x1B), new Array(0x24B4, 0x1C), new Array(0x2183, 0x1D), new Array(0x2EDA, 0x1E), new Array(0x2BED, 0x1F));
+FormatInformation.BITS_SET_IN_HALF_BYTE = new Array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
+FormatInformation.L = new ErrorCorrectionLevel(0, 0x01, 'L');
+FormatInformation.M = new ErrorCorrectionLevel(1, 0x00, 'M');
+FormatInformation.Q = new ErrorCorrectionLevel(2, 0x03, 'Q');
+FormatInformation.H = new ErrorCorrectionLevel(3, 0x02, 'H');
+FormatInformation.FOR_BITS = new Array(FormatInformation.M, FormatInformation.L, FormatInformation.H, FormatInformation.Q);
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class ECB {
+    constructor(count, dataCodewords) {
+        this.count = count;
+        this.dataCodewords = dataCodewords;
+    }
+    get Count() {
+        return this.count;
+    }
+    get DataCodewords() {
+        return this.dataCodewords;
+    }
+}
+class ECBlocks {
+    constructor(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
+        this.getECBlocks = function () {
+            return this.ecBlocks;
+        };
+        this.ecCodewordsPerBlock = ecCodewordsPerBlock;
+        if (ecBlocks2) {
+            this.ecBlocks = new Array(ecBlocks1, ecBlocks2);
+        }
+        else {
+            this.ecBlocks = new Array(ecBlocks1);
+        }
+    }
+    get ECCodewordsPerBlock() {
+        return this.ecCodewordsPerBlock;
+    }
+    get TotalECCodewords() {
+        return this.ecCodewordsPerBlock * this.NumBlocks;
+    }
+    get NumBlocks() {
+        let total = 0;
+        for (let i = 0; i < this.ecBlocks.length; i++) {
+            total += this.ecBlocks[i].length;
+        }
+        return total;
+    }
+}
+class Version {
+    constructor(versionNumber, alignmentPatternCenters, ecBlocks1, ecBlocks2, ecBlocks3, ecBlocks4) {
+        this.buildFunctionPattern = function () {
+            const dimension = this.DimensionForVersion;
+            const bitMatrix = new BitMatrix(dimension);
+            // Top left finder pattern + separator + format
+            bitMatrix.setRegion(0, 0, 9, 9);
+            // Top right finder pattern + separator + format
+            bitMatrix.setRegion(dimension - 8, 0, 8, 9);
+            // Bottom left finder pattern + separator + format
+            bitMatrix.setRegion(0, dimension - 8, 9, 8);
+            // Alignment patterns
+            const max = this.alignmentPatternCenters.length;
+            for (let x = 0; x < max; x++) {
+                const i = this.alignmentPatternCenters[x] - 2;
+                for (let y = 0; y < max; y++) {
+                    if ((x == 0 && (y == 0 || y == max - 1)) || (x == max - 1 && y == 0)) {
+                        // No alignment patterns near the three finder paterns
+                        continue;
+                    }
+                    bitMatrix.setRegion(this.alignmentPatternCenters[y] - 2, i, 5, 5);
+                }
+            }
+            // Vertical timing pattern
+            bitMatrix.setRegion(6, 9, 1, dimension - 17);
+            // Horizontal timing pattern
+            bitMatrix.setRegion(9, 6, dimension - 17, 1);
+            if (this.versionNumber > 6) {
+                // Version info, top right
+                bitMatrix.setRegion(dimension - 11, 0, 3, 6);
+                // Version info, bottom left
+                bitMatrix.setRegion(0, dimension - 11, 6, 3);
+            }
+            return bitMatrix;
+        };
+        this.getECBlocksForLevel = function (ecLevel) {
+            return this.ecBlocks[ecLevel.ordinal()];
+        };
+        this.versionNumber = versionNumber;
+        this.alignmentPatternCenters = alignmentPatternCenters;
+        this.ecBlocks = new Array(ecBlocks1, ecBlocks2, ecBlocks3, ecBlocks4);
+        let total = 0;
+        const ecCodewords = ecBlocks1.ECCodewordsPerBlock;
+        const ecbArray = ecBlocks1.getECBlocks();
+        for (let i = 0; i < ecbArray.length; i++) {
+            const ecBlock = ecbArray[i];
+            total += ecBlock.Count * (ecBlock.DataCodewords + ecCodewords);
+        }
+        this.totalCodewords = total;
+    }
+    get VersionNumber() {
+        return this.versionNumber;
+    }
+    get AlignmentPatternCenters() {
+        return this.alignmentPatternCenters;
+    }
+    get TotalCodewords() {
+        return this.totalCodewords;
+    }
+    get DimensionForVersion() {
+        return 17 + 4 * this.versionNumber;
+    }
+    static getVersionForNumber(versionNumber) {
+        if (versionNumber < 1 || versionNumber > 40) {
+            throw new Error('ArgumentException');
+        }
+        return Version.VERSIONS[versionNumber - 1];
+    }
+    static getProvisionalVersionForDimension(dimension) {
+        if (dimension % 4 != 1) {
+            throw new Error('Error getProvisionalVersionForDimension');
+        }
+        try {
+            return Version.getVersionForNumber((dimension - 17) >> 2);
+        }
+        catch (iae) {
+            throw new Error('Error getVersionForNumber');
+        }
+    }
+    static decodeVersionInformation(versionBits) {
+        let bestDifference = 0xffffffff;
+        let bestVersion = 0;
+        for (let i = 0; i < Version.VERSION_DECODE_INFO.length; i++) {
+            const targetVersion = Version.VERSION_DECODE_INFO[i];
+            // Do the version info bits match exactly? done.
+            if (targetVersion == versionBits) {
+                return this.getVersionForNumber(i + 7);
+            }
+            // Otherwise see if this is the closest to a real version info bit string
+            // we have seen so far
+            const bitsDifference = FormatInformation.numBitsDiffering(versionBits, targetVersion);
+            if (bitsDifference < bestDifference) {
+                bestVersion = i + 7;
+                bestDifference = bitsDifference;
+            }
+        }
+        // We can tolerate up to 3 bits of error since no two version info codewords will
+        // differ in less than 4 bits.
+        if (bestDifference <= 3) {
+            return this.getVersionForNumber(bestVersion);
+        }
+        // If we didn't find a close enough match, fail
+        return null;
+    }
+    static buildVersions() {
+        return new Array(new Version(1, new Array(), new ECBlocks(7, new ECB(1, 19)), new ECBlocks(10, new ECB(1, 16)), new ECBlocks(13, new ECB(1, 13)), new ECBlocks(17, new ECB(1, 9))), new Version(2, new Array(6, 18), new ECBlocks(10, new ECB(1, 34)), new ECBlocks(16, new ECB(1, 28)), new ECBlocks(22, new ECB(1, 22)), new ECBlocks(28, new ECB(1, 16))), new Version(3, new Array(6, 22), new ECBlocks(15, new ECB(1, 55)), new ECBlocks(26, new ECB(1, 44)), new ECBlocks(18, new ECB(2, 17)), new ECBlocks(22, new ECB(2, 13))), new Version(4, new Array(6, 26), new ECBlocks(20, new ECB(1, 80)), new ECBlocks(18, new ECB(2, 32)), new ECBlocks(26, new ECB(2, 24)), new ECBlocks(16, new ECB(4, 9))), new Version(5, new Array(6, 30), new ECBlocks(26, new ECB(1, 108)), new ECBlocks(24, new ECB(2, 43)), new ECBlocks(18, new ECB(2, 15), new ECB(2, 16)), new ECBlocks(22, new ECB(2, 11), new ECB(2, 12))), new Version(6, new Array(6, 34), new ECBlocks(18, new ECB(2, 68)), new ECBlocks(16, new ECB(4, 27)), new ECBlocks(24, new ECB(4, 19)), new ECBlocks(28, new ECB(4, 15))), new Version(7, new Array(6, 22, 38), new ECBlocks(20, new ECB(2, 78)), new ECBlocks(18, new ECB(4, 31)), new ECBlocks(18, new ECB(2, 14), new ECB(4, 15)), new ECBlocks(26, new ECB(4, 13), new ECB(1, 14))), new Version(8, new Array(6, 24, 42), new ECBlocks(24, new ECB(2, 97)), new ECBlocks(22, new ECB(2, 38), new ECB(2, 39)), new ECBlocks(22, new ECB(4, 18), new ECB(2, 19)), new ECBlocks(26, new ECB(4, 14), new ECB(2, 15))), new Version(9, new Array(6, 26, 46), new ECBlocks(30, new ECB(2, 116)), new ECBlocks(22, new ECB(3, 36), new ECB(2, 37)), new ECBlocks(20, new ECB(4, 16), new ECB(4, 17)), new ECBlocks(24, new ECB(4, 12), new ECB(4, 13))), new Version(10, new Array(6, 28, 50), new ECBlocks(18, new ECB(2, 68), new ECB(2, 69)), new ECBlocks(26, new ECB(4, 43), new ECB(1, 44)), new ECBlocks(24, new ECB(6, 19), new ECB(2, 20)), new ECBlocks(28, new ECB(6, 15), new ECB(2, 16))), new Version(11, new Array(6, 30, 54), new ECBlocks(20, new ECB(4, 81)), new ECBlocks(30, new ECB(1, 50), new ECB(4, 51)), new ECBlocks(28, new ECB(4, 22), new ECB(4, 23)), new ECBlocks(24, new ECB(3, 12), new ECB(8, 13))), new Version(12, new Array(6, 32, 58), new ECBlocks(24, new ECB(2, 92), new ECB(2, 93)), new ECBlocks(22, new ECB(6, 36), new ECB(2, 37)), new ECBlocks(26, new ECB(4, 20), new ECB(6, 21)), new ECBlocks(28, new ECB(7, 14), new ECB(4, 15))), new Version(13, new Array(6, 34, 62), new ECBlocks(26, new ECB(4, 107)), new ECBlocks(22, new ECB(8, 37), new ECB(1, 38)), new ECBlocks(24, new ECB(8, 20), new ECB(4, 21)), new ECBlocks(22, new ECB(12, 11), new ECB(4, 12))), new Version(14, new Array(6, 26, 46, 66), new ECBlocks(30, new ECB(3, 115), new ECB(1, 116)), new ECBlocks(24, new ECB(4, 40), new ECB(5, 41)), new ECBlocks(20, new ECB(11, 16), new ECB(5, 17)), new ECBlocks(24, new ECB(11, 12), new ECB(5, 13))), new Version(15, new Array(6, 26, 48, 70), new ECBlocks(22, new ECB(5, 87), new ECB(1, 88)), new ECBlocks(24, new ECB(5, 41), new ECB(5, 42)), new ECBlocks(30, new ECB(5, 24), new ECB(7, 25)), new ECBlocks(24, new ECB(11, 12), new ECB(7, 13))), new Version(16, new Array(6, 26, 50, 74), new ECBlocks(24, new ECB(5, 98), new ECB(1, 99)), new ECBlocks(28, new ECB(7, 45), new ECB(3, 46)), new ECBlocks(24, new ECB(15, 19), new ECB(2, 20)), new ECBlocks(30, new ECB(3, 15), new ECB(13, 16))), new Version(17, new Array(6, 30, 54, 78), new ECBlocks(28, new ECB(1, 107), new ECB(5, 108)), new ECBlocks(28, new ECB(10, 46), new ECB(1, 47)), new ECBlocks(28, new ECB(1, 22), new ECB(15, 23)), new ECBlocks(28, new ECB(2, 14), new ECB(17, 15))), new Version(18, new Array(6, 30, 56, 82), new ECBlocks(30, new ECB(5, 120), new ECB(1, 121)), new ECBlocks(26, new ECB(9, 43), new ECB(4, 44)), new ECBlocks(28, new ECB(17, 22), new ECB(1, 23)), new ECBlocks(28, new ECB(2, 14), new ECB(19, 15))), new Version(19, new Array(6, 30, 58, 86), new ECBlocks(28, new ECB(3, 113), new ECB(4, 114)), new ECBlocks(26, new ECB(3, 44), new ECB(11, 45)), new ECBlocks(26, new ECB(17, 21), new ECB(4, 22)), new ECBlocks(26, new ECB(9, 13), new ECB(16, 14))), new Version(20, new Array(6, 34, 62, 90), new ECBlocks(28, new ECB(3, 107), new ECB(5, 108)), new ECBlocks(26, new ECB(3, 41), new ECB(13, 42)), new ECBlocks(30, new ECB(15, 24), new ECB(5, 25)), new ECBlocks(28, new ECB(15, 15), new ECB(10, 16))), new Version(21, new Array(6, 28, 50, 72, 94), new ECBlocks(28, new ECB(4, 116), new ECB(4, 117)), new ECBlocks(26, new ECB(17, 42)), new ECBlocks(28, new ECB(17, 22), new ECB(6, 23)), new ECBlocks(30, new ECB(19, 16), new ECB(6, 17))), new Version(22, new Array(6, 26, 50, 74, 98), new ECBlocks(28, new ECB(2, 111), new ECB(7, 112)), new ECBlocks(28, new ECB(17, 46)), new ECBlocks(30, new ECB(7, 24), new ECB(16, 25)), new ECBlocks(24, new ECB(34, 13))), new Version(23, new Array(6, 30, 54, 74, 102), new ECBlocks(30, new ECB(4, 121), new ECB(5, 122)), new ECBlocks(28, new ECB(4, 47), new ECB(14, 48)), new ECBlocks(30, new ECB(11, 24), new ECB(14, 25)), new ECBlocks(30, new ECB(16, 15), new ECB(14, 16))), new Version(24, new Array(6, 28, 54, 80, 106), new ECBlocks(30, new ECB(6, 117), new ECB(4, 118)), new ECBlocks(28, new ECB(6, 45), new ECB(14, 46)), new ECBlocks(30, new ECB(11, 24), new ECB(16, 25)), new ECBlocks(30, new ECB(30, 16), new ECB(2, 17))), new Version(25, new Array(6, 32, 58, 84, 110), new ECBlocks(26, new ECB(8, 106), new ECB(4, 107)), new ECBlocks(28, new ECB(8, 47), new ECB(13, 48)), new ECBlocks(30, new ECB(7, 24), new ECB(22, 25)), new ECBlocks(30, new ECB(22, 15), new ECB(13, 16))), new Version(26, new Array(6, 30, 58, 86, 114), new ECBlocks(28, new ECB(10, 114), new ECB(2, 115)), new ECBlocks(28, new ECB(19, 46), new ECB(4, 47)), new ECBlocks(28, new ECB(28, 22), new ECB(6, 23)), new ECBlocks(30, new ECB(33, 16), new ECB(4, 17))), new Version(27, new Array(6, 34, 62, 90, 118), new ECBlocks(30, new ECB(8, 122), new ECB(4, 123)), new ECBlocks(28, new ECB(22, 45), new ECB(3, 46)), new ECBlocks(30, new ECB(8, 23), new ECB(26, 24)), new ECBlocks(30, new ECB(12, 15), new ECB(28, 16))), new Version(28, new Array(6, 26, 50, 74, 98, 122), new ECBlocks(30, new ECB(3, 117), new ECB(10, 118)), new ECBlocks(28, new ECB(3, 45), new ECB(23, 46)), new ECBlocks(30, new ECB(4, 24), new ECB(31, 25)), new ECBlocks(30, new ECB(11, 15), new ECB(31, 16))), new Version(29, new Array(6, 30, 54, 78, 102, 126), new ECBlocks(30, new ECB(7, 116), new ECB(7, 117)), new ECBlocks(28, new ECB(21, 45), new ECB(7, 46)), new ECBlocks(30, new ECB(1, 23), new ECB(37, 24)), new ECBlocks(30, new ECB(19, 15), new ECB(26, 16))), new Version(30, new Array(6, 26, 52, 78, 104, 130), new ECBlocks(30, new ECB(5, 115), new ECB(10, 116)), new ECBlocks(28, new ECB(19, 47), new ECB(10, 48)), new ECBlocks(30, new ECB(15, 24), new ECB(25, 25)), new ECBlocks(30, new ECB(23, 15), new ECB(25, 16))), new Version(31, new Array(6, 30, 56, 82, 108, 134), new ECBlocks(30, new ECB(13, 115), new ECB(3, 116)), new ECBlocks(28, new ECB(2, 46), new ECB(29, 47)), new ECBlocks(30, new ECB(42, 24), new ECB(1, 25)), new ECBlocks(30, new ECB(23, 15), new ECB(28, 16))), new Version(32, new Array(6, 34, 60, 86, 112, 138), new ECBlocks(30, new ECB(17, 115)), new ECBlocks(28, new ECB(10, 46), new ECB(23, 47)), new ECBlocks(30, new ECB(10, 24), new ECB(35, 25)), new ECBlocks(30, new ECB(19, 15), new ECB(35, 16))), new Version(33, new Array(6, 30, 58, 86, 114, 142), new ECBlocks(30, new ECB(17, 115), new ECB(1, 116)), new ECBlocks(28, new ECB(14, 46), new ECB(21, 47)), new ECBlocks(30, new ECB(29, 24), new ECB(19, 25)), new ECBlocks(30, new ECB(11, 15), new ECB(46, 16))), new Version(34, new Array(6, 34, 62, 90, 118, 146), new ECBlocks(30, new ECB(13, 115), new ECB(6, 116)), new ECBlocks(28, new ECB(14, 46), new ECB(23, 47)), new ECBlocks(30, new ECB(44, 24), new ECB(7, 25)), new ECBlocks(30, new ECB(59, 16), new ECB(1, 17))), new Version(35, new Array(6, 30, 54, 78, 102, 126, 150), new ECBlocks(30, new ECB(12, 121), new ECB(7, 122)), new ECBlocks(28, new ECB(12, 47), new ECB(26, 48)), new ECBlocks(30, new ECB(39, 24), new ECB(14, 25)), new ECBlocks(30, new ECB(22, 15), new ECB(41, 16))), new Version(36, new Array(6, 24, 50, 76, 102, 128, 154), new ECBlocks(30, new ECB(6, 121), new ECB(14, 122)), new ECBlocks(28, new ECB(6, 47), new ECB(34, 48)), new ECBlocks(30, new ECB(46, 24), new ECB(10, 25)), new ECBlocks(30, new ECB(2, 15), new ECB(64, 16))), new Version(37, new Array(6, 28, 54, 80, 106, 132, 158), new ECBlocks(30, new ECB(17, 122), new ECB(4, 123)), new ECBlocks(28, new ECB(29, 46), new ECB(14, 47)), new ECBlocks(30, new ECB(49, 24), new ECB(10, 25)), new ECBlocks(30, new ECB(24, 15), new ECB(46, 16))), new Version(38, new Array(6, 32, 58, 84, 110, 136, 162), new ECBlocks(30, new ECB(4, 122), new ECB(18, 123)), new ECBlocks(28, new ECB(13, 46), new ECB(32, 47)), new ECBlocks(30, new ECB(48, 24), new ECB(14, 25)), new ECBlocks(30, new ECB(42, 15), new ECB(32, 16))), new Version(39, new Array(6, 26, 54, 82, 110, 138, 166), new ECBlocks(30, new ECB(20, 117), new ECB(4, 118)), new ECBlocks(28, new ECB(40, 47), new ECB(7, 48)), new ECBlocks(30, new ECB(43, 24), new ECB(22, 25)), new ECBlocks(30, new ECB(10, 15), new ECB(67, 16))), new Version(40, new Array(6, 30, 58, 86, 114, 142, 170), new ECBlocks(30, new ECB(19, 118), new ECB(6, 119)), new ECBlocks(28, new ECB(18, 47), new ECB(31, 48)), new ECBlocks(30, new ECB(34, 24), new ECB(34, 25)), new ECBlocks(30, new ECB(20, 15), new ECB(61, 16))));
+    }
+}
+Version.VERSION_DECODE_INFO = new Array(0x07C94, 0x085BC, 0x09A99, 0x0A4D3, 0x0BBF6, 0x0C762, 0x0D847, 0x0E60D, 0x0F928, 0x10B78, 0x1145D, 0x12A17, 0x13532, 0x149A6, 0x15683, 0x168C9, 0x177EC, 0x18EC4, 0x191E1, 0x1AFAB, 0x1B08E, 0x1CC1A, 0x1D33F, 0x1ED75, 0x1F250, 0x209D5, 0x216F0, 0x228BA, 0x2379F, 0x24B0B, 0x2542E, 0x26A64, 0x27541, 0x28C69);
+Version.VERSIONS = Version.buildVersions();
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+if (!Array.prototype.remove) {
+    Array.prototype.remove = function (from) {
+        const rest = this.slice((from) + 1 || this.length);
+        this.length = from < 0 ? this.length + from : from;
+        return this.push.apply(this, rest);
+    };
+}
+class FinderPattern {
+    constructor(posX, posY, estimatedModuleSize) {
+        this.incrementCount = function () {
+            this.count++;
+        };
+        this.aboutEquals = function (moduleSize, i, j) {
+            if (Math.abs(i - this.y) <= moduleSize && Math.abs(j - this.x) <= moduleSize) {
+                const moduleSizeDiff = Math.abs(moduleSize - this.estimatedModuleSize);
+                return moduleSizeDiff <= 1.0 || moduleSizeDiff / this.estimatedModuleSize <= 1.0;
+            }
+            return false;
+        };
+        this.x = posX;
+        this.y = posY;
+        this.count = 1;
+        this.estimatedModuleSize = estimatedModuleSize;
+    }
+    get EstimatedModuleSize() {
+        return this.estimatedModuleSize;
+    }
+    get Count() {
+        return this.count;
+    }
+    get X() {
+        return this.x;
+    }
+    get Y() {
+        return this.y;
+    }
+}
+FinderPattern.MIN_SKIP = 3;
+FinderPattern.MAX_MODULES = 57;
+FinderPattern.INTEGER_MATH_SHIFT = 8;
+FinderPattern.CENTER_QUORUM = 2;
+class FinderPatternInfo {
+    constructor(patternCenters) {
+        this.bottomLeft = patternCenters[0];
+        this.topLeft = patternCenters[1];
+        this.topRight = patternCenters[2];
+    }
+    get BottomLeft() {
+        return this.bottomLeft;
+    }
+    get TopLeft() {
+        return this.topLeft;
+    }
+    get TopRight() {
+        return this.topRight;
+    }
+}
+class FinderPatternFinder {
+    constructor(width, height) {
+        this.possibleCenters = new Array();
+        this.hasSkipped = false;
+        this.crossCheckStateCount = new Array(0, 0, 0, 0, 0);
+        this.orderBestPatterns = function (patterns) {
+            function distance(pattern1, pattern2) {
+                const xDiff = pattern1.X - pattern2.X;
+                const yDiff = pattern1.Y - pattern2.Y;
+                return Math.sqrt((xDiff * xDiff + yDiff * yDiff));
+            }
+            /// <summary> Returns the z component of the cross product between vectors BC and BA.</summary>
+            function crossProductZ(pointA, pointB, pointC) {
+                const bX = pointB.x;
+                const bY = pointB.y;
+                return ((pointC.x - bX) * (pointA.y - bY)) - ((pointC.y - bY) * (pointA.x - bX));
+            }
+            // Find distances between pattern centers
+            const zeroOneDistance = distance(patterns[0], patterns[1]);
+            const oneTwoDistance = distance(patterns[1], patterns[2]);
+            const zeroTwoDistance = distance(patterns[0], patterns[2]);
+            let pointA, pointB, pointC;
+            // Assume one closest to other two is B; A and C will just be guesses at first
+            if (oneTwoDistance >= zeroOneDistance && oneTwoDistance >= zeroTwoDistance) {
+                pointB = patterns[0];
+                pointA = patterns[1];
+                pointC = patterns[2];
+            }
+            else if (zeroTwoDistance >= oneTwoDistance && zeroTwoDistance >= zeroOneDistance) {
+                pointB = patterns[1];
+                pointA = patterns[0];
+                pointC = patterns[2];
+            }
+            else {
+                pointB = patterns[2];
+                pointA = patterns[0];
+                pointC = patterns[1];
+            }
+            // Use cross product to figure out whether A and C are correct or flipped.
+            // This asks whether BC x BA has a positive z component, which is the arrangement
+            // we want for A, B, C. If it's negative, then we've got it flipped around and
+            // should swap A and C.
+            if (crossProductZ(pointA, pointB, pointC) < 0.0) {
+                const temp = pointA;
+                pointA = pointC;
+                pointC = temp;
+            }
+            patterns[0] = pointA;
+            patterns[1] = pointB;
+            patterns[2] = pointC;
+        };
+        this.foundPatternCross = function (stateCount) {
+            let totalModuleSize = 0;
+            for (let i = 0; i < 5; i++) {
+                const count = stateCount[i];
+                if (count == 0) {
+                    return false;
+                }
+                totalModuleSize += count;
+            }
+            if (totalModuleSize < 7) {
+                return false;
+            }
+            const moduleSize = Math.floor((totalModuleSize << FinderPattern.INTEGER_MATH_SHIFT) / 7);
+            const maxVariance = Math.floor(moduleSize / 2);
+            // Allow less than 50% variance from 1-1-3-1-1 proportions
+            return Math.abs(moduleSize - (stateCount[0]
+                << FinderPattern.INTEGER_MATH_SHIFT)) < maxVariance && Math.abs(moduleSize - (stateCount[1]
+                << FinderPattern.INTEGER_MATH_SHIFT)) < maxVariance && Math.abs(3 * moduleSize - (stateCount[2]
+                << FinderPattern.INTEGER_MATH_SHIFT)) < 3 * maxVariance && Math.abs(moduleSize - (stateCount[3]
+                << FinderPattern.INTEGER_MATH_SHIFT)) < maxVariance && Math.abs(moduleSize - (stateCount[4]
+                << FinderPattern.INTEGER_MATH_SHIFT)) < maxVariance;
+        };
+        this.centerFromEnd = function (stateCount, end) {
+            return (end - stateCount[4] - stateCount[3]) - stateCount[2] / 2.0;
+        };
+        this.crossCheckVertical = function (startI, centerJ, maxCount, originalStateCountTotal) {
+            const image = this.image;
+            const maxI = this.height;
+            const stateCount = this.CrossCheckStateCount;
+            // Start counting up from center
+            let i = startI;
+            while (i >= 0 && image[centerJ + i * this.width]) {
+                stateCount[2]++;
+                i--;
+            }
+            if (i < 0) {
+                return NaN;
+            }
+            while (i >= 0 && !image[centerJ + i * this.width] && stateCount[1] <= maxCount) {
+                stateCount[1]++;
+                i--;
+            }
+            // If already too many modules in this state or ran off the edge:
+            if (i < 0 || stateCount[1] > maxCount) {
+                return NaN;
+            }
+            while (i >= 0 && image[centerJ + i * this.width] && stateCount[0] <= maxCount) {
+                stateCount[0]++;
+                i--;
+            }
+            if (stateCount[0] > maxCount) {
+                return NaN;
+            }
+            // Now also count down from center
+            i = startI + 1;
+            while (i < maxI && image[centerJ + i * this.width]) {
+                stateCount[2]++;
+                i++;
+            }
+            if (i == maxI) {
+                return NaN;
+            }
+            while (i < maxI && !image[centerJ + i * this.width] && stateCount[3] < maxCount) {
+                stateCount[3]++;
+                i++;
+            }
+            if (i == maxI || stateCount[3] >= maxCount) {
+                return NaN;
+            }
+            while (i < maxI && image[centerJ + i * this.width] && stateCount[4] < maxCount) {
+                stateCount[4]++;
+                i++;
+            }
+            if (stateCount[4] >= maxCount) {
+                return NaN;
+            }
+            // If we found a finder-pattern-like section, but its size is more than 40% different than
+            // the original, assume it's a false positive
+            const stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2] + stateCount[3] + stateCount[4];
+            if (5 * Math.abs(stateCountTotal - originalStateCountTotal) >= 2 * originalStateCountTotal) {
+                return NaN;
+            }
+            return this.foundPatternCross(stateCount) ? this.centerFromEnd(stateCount, i) : NaN;
+        };
+        this.crossCheckHorizontal = function (startJ, centerI, maxCount, originalStateCountTotal) {
+            const image = this.image;
+            const maxJ = this.width;
+            const stateCount = this.CrossCheckStateCount;
+            let j = startJ;
+            while (j >= 0 && image[j + centerI * this.width]) {
+                stateCount[2]++;
+                j--;
+            }
+            if (j < 0) {
+                return NaN;
+            }
+            while (j >= 0 && !image[j + centerI * this.width] && stateCount[1] <= maxCount) {
+                stateCount[1]++;
+                j--;
+            }
+            if (j < 0 || stateCount[1] > maxCount) {
+                return NaN;
+            }
+            while (j >= 0 && image[j + centerI * this.width] && stateCount[0] <= maxCount) {
+                stateCount[0]++;
+                j--;
+            }
+            if (stateCount[0] > maxCount) {
+                return NaN;
+            }
+            j = startJ + 1;
+            while (j < maxJ && image[j + centerI * this.width]) {
+                stateCount[2]++;
+                j++;
+            }
+            if (j == maxJ) {
+                return NaN;
+            }
+            while (j < maxJ && !image[j + centerI * this.width] && stateCount[3] < maxCount) {
+                stateCount[3]++;
+                j++;
+            }
+            if (j == maxJ || stateCount[3] >= maxCount) {
+                return NaN;
+            }
+            while (j < maxJ && image[j + centerI * this.width] && stateCount[4] < maxCount) {
+                stateCount[4]++;
+                j++;
+            }
+            if (stateCount[4] >= maxCount) {
+                return NaN;
+            }
+            // If we found a finder-pattern-like section, but its size is significantly different than
+            // the original, assume it's a false positive
+            const stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2] + stateCount[3] + stateCount[4];
+            if (5 * Math.abs(stateCountTotal - originalStateCountTotal) >= originalStateCountTotal) {
+                return NaN;
+            }
+            return this.foundPatternCross(stateCount) ? this.centerFromEnd(stateCount, j) : NaN;
+        };
+        this.handlePossibleCenter = function (stateCount, i, j) {
+            const stateCountTotal = stateCount[0] + stateCount[1] + stateCount[2] + stateCount[3] + stateCount[4];
+            let centerJ = this.centerFromEnd(stateCount, j); // float
+            const centerI = this.crossCheckVertical(i, Math.floor(centerJ), stateCount[2], stateCountTotal); // float
+            if (!isNaN(centerI)) {
+                // Re-cross check
+                centerJ = this.crossCheckHorizontal(Math.floor(centerJ), Math.floor(centerI), stateCount[2], stateCountTotal);
+                if (!isNaN(centerJ)) {
+                    const estimatedModuleSize = stateCountTotal / 7.0;
+                    let found = false;
+                    const max = this.possibleCenters.length;
+                    for (let index = 0; index < max; index++) {
+                        const center = this.possibleCenters[index];
+                        // Look for about the same center and module size:
+                        if (center.aboutEquals(estimatedModuleSize, centerI, centerJ)) {
+                            center.incrementCount();
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        const point = new FinderPattern(centerJ, centerI, estimatedModuleSize);
+                        this.possibleCenters.push(point);
+                        if (this.resultPointCallback != null) {
+                            this.resultPointCallback.foundPossibleResultPoint(point);
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        };
+        this.selectBestPatterns = function () {
+            const startSize = this.possibleCenters.length;
+            if (startSize < 3) {
+                // Couldn't find enough finder patterns
+                throw new Error(`Couldn't find enough finder patterns (found: ${startSize})`);
+            }
+            // Filter outlier possibilities whose module size is too different
+            if (startSize > 3) {
+                // But we can only afford to do so if we have at least 4 possibilities to choose from
+                let totalModuleSize = 0.0;
+                let square = 0.0;
+                for (let i = 0; i < startSize; i++) {
+                    // totalModuleSize +=  this.possibleCenters[i].EstimatedModuleSize;
+                    const centerValue = this.possibleCenters[i].EstimatedModuleSize;
+                    totalModuleSize += centerValue;
+                    square += (centerValue * centerValue);
+                }
+                const average = totalModuleSize / startSize;
+                this.possibleCenters.sort(function (center1, center2) {
+                    const dA = Math.abs(center2.EstimatedModuleSize - average);
+                    const dB = Math.abs(center1.EstimatedModuleSize - average);
+                    if (dA < dB) {
+                        return (-1);
+                    }
+                    else if (dA == dB) {
+                        return 0;
+                    }
+                    else {
+                        return 1;
+                    }
+                });
+                const stdDev = Math.sqrt(square / startSize - average * average);
+                const limit = Math.max(0.2 * average, stdDev);
+                for (let i = this.possibleCenters.length - 1; i >= 0; i--) {
+                    const pattern = this.possibleCenters[i];
+                    // if (Math.abs(pattern.EstimatedModuleSize - average) > 0.2 * average)
+                    if (Math.abs(pattern.EstimatedModuleSize - average) > limit) {
+                        this.possibleCenters.remove(i);
+                    }
+                }
+            }
+            if (this.possibleCenters.length > 3) {
+                // Throw away all but those first size candidate points we found.
+                this.possibleCenters.sort(function (a, b) {
+                    if (a.count > b.count) {
+                        return -1;
+                    }
+                    if (a.count < b.count) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            }
+            return new Array(this.possibleCenters[0], this.possibleCenters[1], this.possibleCenters[2]);
+        };
+        this.findRowSkip = function () {
+            const max = this.possibleCenters.length;
+            if (max <= 1) {
+                return 0;
+            }
+            let firstConfirmedCenter = null;
+            for (let i = 0; i < max; i++) {
+                const center = this.possibleCenters[i];
+                if (center.Count >= FinderPattern.CENTER_QUORUM) {
+                    if (firstConfirmedCenter == null) {
+                        firstConfirmedCenter = center;
+                    }
+                    else {
+                        // We have two confirmed centers
+                        // How far down can we skip before resuming looking for the next
+                        // pattern? In the worst case, only the difference between the
+                        // difference in the x / y coordinates of the two centers.
+                        // This is the case where you find top left last.
+                        this.hasSkipped = true;
+                        return Math.floor((Math.abs(firstConfirmedCenter.X - center.X) - Math.abs(firstConfirmedCenter.Y - center.Y)) / 2);
+                    }
+                }
+            }
+            return 0;
+        };
+        this.haveMultiplyConfirmedCenters = function () {
+            let confirmedCount = 0;
+            let totalModuleSize = 0.0;
+            const max = this.possibleCenters.length;
+            for (let i = 0; i < max; i++) {
+                const pattern = this.possibleCenters[i];
+                if (pattern.Count >= FinderPattern.CENTER_QUORUM) {
+                    confirmedCount++;
+                    totalModuleSize += pattern.EstimatedModuleSize;
+                }
+            }
+            if (confirmedCount < 3) {
+                return false;
+            }
+            // OK, we have at least 3 confirmed centers, but, it's possible that one is a "false positive"
+            // and that we need to keep looking. We detect this by asking if the estimated module sizes
+            // vary too much. We arbitrarily say that when the total deviation from average exceeds
+            // 5% of the total module size estimates, it's too much.
+            const average = totalModuleSize / max;
+            let totalDeviation = 0.0;
+            for (let i = 0; i < max; i++) {
+                const pattern = this.possibleCenters[i];
+                totalDeviation += Math.abs(pattern.EstimatedModuleSize - average);
+            }
+            return totalDeviation <= 0.05 * totalModuleSize;
+        };
+        this.findFinderPattern = function (image) {
+            const tryHarder = false;
+            this.image = image;
+            const maxI = this.height;
+            const maxJ = this.width;
+            let iSkip = Math.floor((3 * maxI) / (4 * FinderPattern.MAX_MODULES));
+            if (iSkip < FinderPattern.MIN_SKIP || tryHarder) {
+                iSkip = FinderPattern.MIN_SKIP;
+            }
+            let done = false;
+            const stateCount = new Array(5);
+            for (let i = iSkip - 1; i < maxI && !done; i += iSkip) {
+                // Get a row of black/white values
+                stateCount[0] = 0;
+                stateCount[1] = 0;
+                stateCount[2] = 0;
+                stateCount[3] = 0;
+                stateCount[4] = 0;
+                let currentState = 0;
+                for (let j = 0; j < maxJ; j++) {
+                    if (image[j + i * this.width]) {
+                        // Black pixel
+                        if ((currentState & 1) == 1) {
+                            // Counting white pixels
+                            currentState++;
+                        }
+                        stateCount[currentState]++;
+                    }
+                    else {
+                        // White pixel
+                        if ((currentState & 1) == 0) {
+                            // Counting black pixels
+                            if (currentState == 4) {
+                                // A winner?
+                                if (this.foundPatternCross(stateCount)) {
+                                    // Yes
+                                    const confirmed = this.handlePossibleCenter(stateCount, i, j);
+                                    if (confirmed) {
+                                        // Start examining every other line. Checking each line turned out to be too
+                                        // expensive and didn't improve performance.
+                                        iSkip = 2;
+                                        if (this.hasSkipped) {
+                                            done = this.haveMultiplyConfirmedCenters();
+                                        }
+                                        else {
+                                            const rowSkip = this.findRowSkip();
+                                            if (rowSkip > stateCount[2]) {
+                                                // Skip rows between row of lower confirmed center
+                                                // and top of presumed third confirmed center
+                                                // but back up a bit to get a full chance of detecting
+                                                // it, entire width of center of finder pattern
+                                                // Skip by rowSkip, but back off by stateCount[2] (size of last center
+                                                // of pattern we saw) to be conservative, and also back off by iSkip which
+                                                // is about to be re-added
+                                                i += rowSkip - stateCount[2] - iSkip;
+                                                j = maxJ - 1;
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        // Advance to next black pixel
+                                        do {
+                                            j++;
+                                        } while (j < maxJ && !image[j + i * this.width]);
+                                        j--; // back up to that last white pixel
+                                    }
+                                    // Clear state to start looking again
+                                    currentState = 0;
+                                    stateCount[0] = 0;
+                                    stateCount[1] = 0;
+                                    stateCount[2] = 0;
+                                    stateCount[3] = 0;
+                                    stateCount[4] = 0;
+                                }
+                                else {
+                                    // No, shift counts back by two
+                                    stateCount[0] = stateCount[2];
+                                    stateCount[1] = stateCount[3];
+                                    stateCount[2] = stateCount[4];
+                                    stateCount[3] = 1;
+                                    stateCount[4] = 0;
+                                    currentState = 3;
+                                }
+                            }
+                            else {
+                                stateCount[++currentState]++;
+                            }
+                        }
+                        else {
+                            // Counting white pixels
+                            stateCount[currentState]++;
+                        }
+                    }
+                }
+                if (this.foundPatternCross(stateCount)) {
+                    const confirmed = this.handlePossibleCenter(stateCount, i, maxJ);
+                    if (confirmed) {
+                        iSkip = stateCount[0];
+                        if (this.hasSkipped) {
+                            // Found a third one
+                            done = this.haveMultiplyConfirmedCenters();
+                        }
+                    }
+                }
+            }
+            const patternInfo = this.selectBestPatterns();
+            this.orderBestPatterns(patternInfo);
+            return new FinderPatternInfo(patternInfo);
+        };
+        this.width = width;
+        this.height = height;
+    }
+    get CrossCheckStateCount() {
+        this.crossCheckStateCount[0] = 0;
+        this.crossCheckStateCount[1] = 0;
+        this.crossCheckStateCount[2] = 0;
+        this.crossCheckStateCount[3] = 0;
+        this.crossCheckStateCount[4] = 0;
+        return this.crossCheckStateCount;
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class DetectorResult {
+    constructor(bits, points) {
+        this.bits = bits;
+        this.points = points;
+    }
+}
+class Detector {
+    constructor(image, rawImage, width, height) {
+        this.calculateModuleSizeOneWay = function (pattern, otherPattern) {
+            const moduleSizeEst1 = this.sizeOfBlackWhiteBlackRunBothWays(Math.floor(pattern.X), Math.floor(pattern.Y), Math.floor(otherPattern.X), Math.floor(otherPattern.Y));
+            const moduleSizeEst2 = this.sizeOfBlackWhiteBlackRunBothWays(Math.floor(otherPattern.X), Math.floor(otherPattern.Y), Math.floor(pattern.X), Math.floor(pattern.Y));
+            if (isNaN(moduleSizeEst1)) {
+                return moduleSizeEst2 / 7.0;
+            }
+            if (isNaN(moduleSizeEst2)) {
+                return moduleSizeEst1 / 7.0;
+            }
+            // Average them, and divide by 7 since we've counted the width of 3 black modules,
+            // and 1 white and 1 black module on either side. Ergo, divide sum by 14.
+            return (moduleSizeEst1 + moduleSizeEst2) / 14.0;
+        };
+        this.calculateModuleSize = function (topLeft, topRight, bottomLeft) {
+            // Take the average
+            return (this.calculateModuleSizeOneWay(topLeft, topRight) + this.calculateModuleSizeOneWay(topLeft, bottomLeft)) / 2.0;
+        };
+        this.distance = function (pattern1, pattern2) {
+            const xDiff = pattern1.X - pattern2.X;
+            const yDiff = pattern1.Y - pattern2.Y;
+            return Math.sqrt((xDiff * xDiff + yDiff * yDiff));
+        };
+        this.computeDimension = function (topLeft, topRight, bottomLeft, moduleSize) {
+            const tltrCentersDimension = Math.round(this.distance(topLeft, topRight) / moduleSize);
+            const tlblCentersDimension = Math.round(this.distance(topLeft, bottomLeft) / moduleSize);
+            let dimension = ((tltrCentersDimension + tlblCentersDimension) >> 1) + 7;
+            switch (dimension & 0x03) {
+                // mod 4
+                case 0:
+                    dimension++;
+                    break;
+                // 1? do nothing
+                case 2:
+                    dimension--;
+                    break;
+                case 3:
+                    throw new Error('Error');
+            }
+            return dimension;
+        };
+        this.findAlignmentInRegion = function (overallEstModuleSize, estAlignmentX, estAlignmentY, allowanceFactor) {
+            // Look for an alignment pattern (3 modules in size) around where it
+            // should be
+            const allowance = Math.floor(allowanceFactor * overallEstModuleSize);
+            const alignmentAreaLeftX = Math.max(0, estAlignmentX - allowance);
+            const alignmentAreaRightX = Math.min(this.width - 1, estAlignmentX + allowance);
+            if (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3) {
+                throw new Error('Error');
+            }
+            const alignmentAreaTopY = Math.max(0, estAlignmentY - allowance);
+            const alignmentAreaBottomY = Math.min(this.height - 1, estAlignmentY + allowance);
+            const alignmentFinder = new AlignmentPatternFinder(this.image, alignmentAreaLeftX, alignmentAreaTopY, alignmentAreaRightX - alignmentAreaLeftX, alignmentAreaBottomY - alignmentAreaTopY, overallEstModuleSize, this.width, this.height, this.resultPointCallback);
+            return alignmentFinder.find();
+        };
+        this.createTransform = function (topLeft, topRight, bottomLeft, alignmentPattern, dimension) {
+            const dimMinusThree = dimension - 3.5;
+            let bottomRightX;
+            let bottomRightY;
+            let sourceBottomRightX;
+            let sourceBottomRightY;
+            if (alignmentPattern != null) {
+                bottomRightX = alignmentPattern.X;
+                bottomRightY = alignmentPattern.Y;
+                sourceBottomRightX = sourceBottomRightY = dimMinusThree - 3.0;
+            }
+            else {
+                // Don't have an alignment pattern, just make up the bottom-right point
+                bottomRightX = (topRight.X - topLeft.X) + bottomLeft.X;
+                bottomRightY = (topRight.Y - topLeft.Y) + bottomLeft.Y;
+                sourceBottomRightX = sourceBottomRightY = dimMinusThree;
+            }
+            const transform = PerspectiveTransform.quadrilateralToQuadrilateral(3.5, 3.5, dimMinusThree, 3.5, sourceBottomRightX, sourceBottomRightY, 3.5, dimMinusThree, topLeft.X, topLeft.Y, topRight.X, topRight.Y, bottomRightX, bottomRightY, bottomLeft.X, bottomLeft.Y);
+            return transform;
+        };
+        this.sampleGrid = function (image, transform, dimension) {
+            const sampler = new GridSampler(this.width, this.height);
+            return sampler.sampleGrid3(image, this.rawImage, dimension, transform);
+        };
+        this.detect = function () {
+            const info = new FinderPatternFinder(this.width, this.height).findFinderPattern(this.image);
+            return this.processFinderPatternInfo(info);
+        };
+        this.image = image;
+        this.rawImage = rawImage;
+        this.height = height;
+        this.width = width;
+    }
+    sizeOfBlackWhiteBlackRun(fromX, fromY, toX, toY) {
+        // Mild variant of Bresenham's algorithm;
+        // see http://en.wikipedia.org/wiki/Bresenham's_line_algorithm
+        const steep = Math.abs(toY - fromY) > Math.abs(toX - fromX);
+        if (steep) {
+            let temp = fromX;
+            fromX = fromY;
+            fromY = temp;
+            temp = toX;
+            toX = toY;
+            toY = temp;
+        }
+        const dx = Math.abs(toX - fromX);
+        const dy = Math.abs(toY - fromY);
+        let error = -dx >> 1;
+        const ystep = fromY < toY ? 1 : -1;
+        const xstep = fromX < toX ? 1 : -1;
+        let state = 0; // In black pixels, looking for white, first or second time
+        for (let x = fromX, y = fromY; x != toX; x += xstep) {
+            const realX = steep ? y : x;
+            const realY = steep ? x : y;
+            if (state == 1) {
+                // In white pixels, looking for black
+                if (this.image[realX + realY * this.width]) {
+                    state++;
+                }
+            }
+            else {
+                if (!this.image[realX + realY * this.width]) {
+                    state++;
+                }
+            }
+            if (state == 3) {
+                // Found black, white, black, and stumbled back onto white; done
+                const diffX = x - fromX;
+                const diffY = y - fromY;
+                return Math.sqrt((diffX * diffX + diffY * diffY));
+            }
+            error += dy;
+            if (error > 0) {
+                if (y == toY) {
+                    break;
+                }
+                y += ystep;
+                error -= dx;
+            }
+        }
+        const diffX2 = toX - fromX;
+        const diffY2 = toY - fromY;
+        return Math.sqrt((diffX2 * diffX2 + diffY2 * diffY2));
+    }
+    sizeOfBlackWhiteBlackRunBothWays(fromX, fromY, toX, toY) {
+        let result = this.sizeOfBlackWhiteBlackRun(fromX, fromY, toX, toY);
+        // Now count other way -- don't run off image though of course
+        let scale = 1.0;
+        let otherToX = fromX - (toX - fromX);
+        if (otherToX < 0) {
+            scale = fromX / (fromX - otherToX);
+            otherToX = 0;
+        }
+        else if (otherToX >= this.width) {
+            scale = (this.width - 1 - fromX) / (otherToX - fromX);
+            otherToX = this.width - 1;
+        }
+        let otherToY = Math.floor(fromY - (toY - fromY) * scale);
+        scale = 1.0;
+        if (otherToY < 0) {
+            scale = fromY / (fromY - otherToY);
+            otherToY = 0;
+        }
+        else if (otherToY >= this.height) {
+            scale = (this.height - 1 - fromY) / (otherToY - fromY);
+            otherToY = this.height - 1;
+        }
+        otherToX = Math.floor(fromX + (otherToX - fromX) * scale);
+        result += this.sizeOfBlackWhiteBlackRun(fromX, fromY, otherToX, otherToY);
+        return result - 1.0; // -1 because we counted the middle pixel twice
+    }
+    processFinderPatternInfo(info) {
+        const topLeft = info.TopLeft;
+        const topRight = info.TopRight;
+        const bottomLeft = info.BottomLeft;
+        const moduleSize = this.calculateModuleSize(topLeft, topRight, bottomLeft);
+        if (moduleSize < 1.0) {
+            throw new Error('Error');
+        }
+        const dimension = this.computeDimension(topLeft, topRight, bottomLeft, moduleSize);
+        const provisionalVersion = Version.getProvisionalVersionForDimension(dimension);
+        const modulesBetweenFPCenters = provisionalVersion.DimensionForVersion - 7;
+        let alignmentPattern = null;
+        // Anything above version 1 has an alignment pattern
+        if (provisionalVersion.AlignmentPatternCenters.length > 0) {
+            // Guess where a "bottom right" finder pattern would have been
+            const bottomRightX = topRight.X - topLeft.X + bottomLeft.X;
+            const bottomRightY = topRight.Y - topLeft.Y + bottomLeft.Y;
+            // Estimate that alignment pattern is closer by 3 modules
+            // from "bottom right" to known top left location
+            const correctionToTopLeft = 1.0 - 3.0 / modulesBetweenFPCenters;
+            const estAlignmentX = Math.floor(topLeft.X + correctionToTopLeft * (bottomRightX - topLeft.X));
+            const estAlignmentY = Math.floor(topLeft.Y + correctionToTopLeft * (bottomRightY - topLeft.Y));
+            // Kind of arbitrary -- expand search radius before giving up
+            for (let i = 4; i <= 16; i <<= 1) {
+                // try
+                // {
+                alignmentPattern = this.findAlignmentInRegion(moduleSize, estAlignmentX, estAlignmentY, i);
+                break;
+                // }
+                // catch (re)
+                // {
+                // try next round
+                // }
+            }
+            // If we didn't find alignment pattern... well try anyway without it
+        }
+        const transform = this.createTransform(topLeft, topRight, bottomLeft, alignmentPattern, dimension);
+        const bits = this.sampleGrid(this.image, transform, dimension);
+        let points;
+        if (alignmentPattern == null) {
+            points = new Array(bottomLeft, topLeft, topRight);
+        }
+        else {
+            points = new Array(bottomLeft, topLeft, topRight, alignmentPattern);
+        }
+        return new DetectorResult(bits, points);
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class GF256Poly {
+    constructor(field, coefficients) {
+        this.divide = function (other) {
+            if (this.field != other.field) {
+                throw new Error('GF256Polys do not have same GF256 field');
+            }
+            if (other.Zero) {
+                throw new Error('Divide by 0');
+            }
+            let quotient = this.field.Zero;
+            let remainder = this;
+            const denominatorLeadingTerm = other.getCoefficient(other.Degree);
+            const inverseDenominatorLeadingTerm = this.field.inverse(denominatorLeadingTerm);
+            while (remainder.Degree >= other.Degree && !remainder.Zero) {
+                const degreeDifference = remainder.Degree - other.Degree;
+                const scale = this.field.multiply(remainder.getCoefficient(remainder.Degree), inverseDenominatorLeadingTerm);
+                const term = other.multiplyByMonomial(degreeDifference, scale);
+                const iterationQuotient = this.field.buildMonomial(degreeDifference, scale);
+                quotient = quotient.addOrSubtract(iterationQuotient);
+                remainder = remainder.addOrSubtract(term);
+            }
+            return new Array(quotient, remainder);
+        };
+        if (coefficients == null || coefficients.length == 0) {
+            throw new Error('System.ArgumentException');
+        }
+        this.field = field;
+        const coefficientsLength = coefficients.length;
+        if (coefficientsLength > 1 && coefficients[0] == 0) {
+            // Leading term must be non-zero for anything except the constant polynomial "0"
+            let firstNonZero = 1;
+            while (firstNonZero < coefficientsLength && coefficients[firstNonZero] == 0) {
+                firstNonZero++;
+            }
+            if (firstNonZero == coefficientsLength) {
+                this.coefficients = field.Zero.coefficients;
+            }
+            else {
+                this.coefficients = new Array(coefficientsLength - firstNonZero);
+                for (let i = 0; i < this.coefficients.length; i++) {
+                    this.coefficients[i] = 0;
+                }
+                // Array.Copy(coefficients, firstNonZero, this.coefficients, 0, this.coefficients.length);
+                for (let ci = 0; ci < this.coefficients.length; ci++) {
+                    this.coefficients[ci] = coefficients[firstNonZero + ci];
+                }
+            }
+        }
+        else {
+            this.coefficients = coefficients;
+        }
+    }
+    get Zero() {
+        return this.coefficients[0] == 0;
+    }
+    get Degree() {
+        return this.coefficients.length - 1;
+    }
+    get Coefficients() {
+        return this.coefficients;
+    }
+    getCoefficient(degree) {
+        return this.coefficients[this.coefficients.length - 1 - degree];
+    }
+    evaluateAt(a) {
+        if (a == 0) {
+            // Just return the x^0 coefficient
+            return this.getCoefficient(0);
+        }
+        const size = this.coefficients.length;
+        if (a == 1) {
+            // Just the sum of the coefficients
+            let result = 0;
+            for (let i = 0; i < size; i++) {
+                result = GF256.addOrSubtract(result, this.coefficients[i]);
+            }
+            return result;
+        }
+        let result2 = this.coefficients[0];
+        for (let i = 1; i < size; i++) {
+            result2 = GF256.addOrSubtract(this.field.multiply(a, result2), this.coefficients[i]);
+        }
+        return result2;
+    }
+    addOrSubtract(other) {
+        if (this.field != other.field) {
+            throw new Error('GF256Polys do not have same GF256 field');
+        }
+        if (this.Zero) {
+            return other;
+        }
+        if (other.Zero) {
+            return this;
+        }
+        let smallerCoefficients = this.coefficients;
+        let largerCoefficients = other.coefficients;
+        if (smallerCoefficients.length > largerCoefficients.length) {
+            const temp = smallerCoefficients;
+            smallerCoefficients = largerCoefficients;
+            largerCoefficients = temp;
+        }
+        const sumDiff = new Array(largerCoefficients.length);
+        const lengthDiff = largerCoefficients.length - smallerCoefficients.length;
+        // Copy high-order terms only found in higher-degree polynomial's coefficients
+        // Array.Copy(largerCoefficients, 0, sumDiff, 0, lengthDiff);
+        for (let ci = 0; ci < lengthDiff; ci++) {
+            sumDiff[ci] = largerCoefficients[ci];
+        }
+        for (let i = lengthDiff; i < largerCoefficients.length; i++) {
+            sumDiff[i] = GF256.addOrSubtract(smallerCoefficients[i - lengthDiff], largerCoefficients[i]);
+        }
+        return new GF256Poly(this.field, sumDiff);
+    }
+    multiply1(other) {
+        if (this.field != other.field) {
+            throw new Error('GF256Polys do not have same GF256 field');
+        }
+        if (this.Zero || other.Zero) {
+            return this.field.Zero;
+        }
+        const aCoefficients = this.coefficients;
+        const aLength = aCoefficients.length;
+        const bCoefficients = other.coefficients;
+        const bLength = bCoefficients.length;
+        const product = new Array(aLength + bLength - 1);
+        for (let i = 0; i < aLength; i++) {
+            const aCoeff = aCoefficients[i];
+            for (let j = 0; j < bLength; j++) {
+                product[i + j] = GF256.addOrSubtract(product[i + j], this.field.multiply(aCoeff, bCoefficients[j]));
+            }
+        }
+        return new GF256Poly(this.field, product);
+    }
+    multiply2(scalar) {
+        if (scalar == 0) {
+            return this.field.Zero;
+        }
+        if (scalar == 1) {
+            return this;
+        }
+        const size = this.coefficients.length;
+        const product = new Array(size);
+        for (let i = 0; i < size; i++) {
+            product[i] = this.field.multiply(this.coefficients[i], scalar);
+        }
+        return new GF256Poly(this.field, product);
+    }
+    multiplyByMonomial(degree, coefficient) {
+        if (degree < 0) {
+            throw new Error('System.ArgumentException');
+        }
+        if (coefficient == 0) {
+            return this.field.Zero;
+        }
+        const size = this.coefficients.length;
+        const product = new Array(size + degree);
+        for (let i = 0; i < product.length; i++) {
+            product[i] = 0;
+        }
+        for (let i = 0; i < size; i++) {
+            product[i] = this.field.multiply(this.coefficients[i], coefficient);
+        }
+        return new GF256Poly(this.field, product);
+    }
+}
+class GF256 {
+    constructor(primitive) {
+        this.expTable = new Array(256);
+        this.logTable = new Array(256);
+        let x = 1;
+        for (let i = 0; i < 256; i++) {
+            this.expTable[i] = x;
+            x <<= 1; // x = x * 2; we're assuming the generator alpha is 2
+            if (x >= 0x100) {
+                x ^= primitive;
+            }
+        }
+        for (let i = 0; i < 255; i++) {
+            this.logTable[this.expTable[i]] = i;
+        }
+        // logTable[0] == 0 but this should never be used
+        const at0 = new Array(1);
+        at0[0] = 0;
+        this.zero = new GF256Poly(this, new Array(at0));
+        const at1 = new Array(1);
+        at1[0] = 1;
+        this.one = new GF256Poly(this, new Array(at1));
+    }
+    get Zero() {
+        return this.zero;
+    }
+    get One() {
+        return this.one;
+    }
+    static addOrSubtract(a, b) {
+        return a ^ b;
+    }
+    buildMonomial(degree, coefficient) {
+        if (degree < 0) {
+            throw new Error('System.ArgumentException');
+        }
+        if (coefficient == 0) {
+            return this.zero;
+        }
+        const coefficients = new Array(degree + 1);
+        for (let i = 0; i < coefficients.length; i++) {
+            coefficients[i] = 0;
+        }
+        coefficients[0] = coefficient;
+        return new GF256Poly(this, coefficients);
+    }
+    exp(a) {
+        return this.expTable[a];
+    }
+    log(a) {
+        if (a == 0) {
+            throw new Error('System.ArgumentException');
+        }
+        return this.logTable[a];
+    }
+    inverse(a) {
+        if (a == 0) {
+            throw new Error('System.ArithmeticException');
+        }
+        return this.expTable[255 - this.logTable[a]];
+    }
+    multiply(a, b) {
+        if (a == 0 || b == 0) {
+            return 0;
+        }
+        if (a == 1) {
+            return b;
+        }
+        if (b == 1) {
+            return a;
+        }
+        return this.expTable[(this.logTable[a] + this.logTable[b]) % 255];
+    }
+}
+GF256.QR_CODE_FIELD = new GF256(0x011D);
+GF256.DATA_MATRIX_FIELD = new GF256(0x012D);
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class ReedSolomonDecoder {
+    constructor(field) {
+        this.field = field;
+    }
+    decode(received, twoS) {
+        const poly = new GF256Poly(this.field, received);
+        const syndromeCoefficients = new Array(twoS);
+        for (let i = 0; i < syndromeCoefficients.length; i++) {
+            syndromeCoefficients[i] = 0;
+        }
+        const dataMatrix = false; // this.field.Equals(GF256.DATA_MATRIX_FIELD);
+        let noError = true;
+        for (let i = 0; i < twoS; i++) {
+            // Thanks to sanfordsquires for this fix:
+            const evalu = poly.evaluateAt(this.field.exp(dataMatrix ? i + 1 : i));
+            syndromeCoefficients[syndromeCoefficients.length - 1 - i] = evalu;
+            if (evalu != 0) {
+                noError = false;
+            }
+        }
+        if (noError) {
+            return;
+        }
+        const syndrome = new GF256Poly(this.field, syndromeCoefficients);
+        const sigmaOmega = this.runEuclideanAlgorithm(this.field.buildMonomial(twoS, 1), syndrome, twoS);
+        const sigma = sigmaOmega[0];
+        const omega = sigmaOmega[1];
+        const errorLocations = this.findErrorLocations(sigma);
+        const errorMagnitudes = this.findErrorMagnitudes(omega, errorLocations, dataMatrix);
+        for (let i = 0; i < errorLocations.length; i++) {
+            const position = received.length - 1 - this.field.log(errorLocations[i]);
+            if (position < 0) {
+                throw new Error('ReedSolomonException Bad error location');
+            }
+            received[position] = GF256.addOrSubtract(received[position], errorMagnitudes[i]);
+        }
+    }
+    runEuclideanAlgorithm(a, b, R) {
+        // Assume a's degree is >= b's
+        if (a.Degree < b.Degree) {
+            const temp = a;
+            a = b;
+            b = temp;
+        }
+        let rLast = a;
+        let r = b;
+        let sLast = this.field.One;
+        let s = this.field.Zero;
+        let tLast = this.field.Zero;
+        let t = this.field.One;
+        // Run Euclidean algorithm until r's degree is less than R/2
+        while (r.Degree >= Math.floor(R / 2)) {
+            const rLastLast = rLast;
+            const sLastLast = sLast;
+            const tLastLast = tLast;
+            rLast = r;
+            sLast = s;
+            tLast = t;
+            // Divide rLastLast by rLast, with quotient in q and remainder in r
+            if (rLast.Zero) {
+                // Oops, Euclidean algorithm already terminated?
+                throw new Error('r_{i-1} was zero');
+            }
+            r = rLastLast;
+            let q = this.field.Zero;
+            const denominatorLeadingTerm = rLast.getCoefficient(rLast.Degree);
+            const dltInverse = this.field.inverse(denominatorLeadingTerm);
+            while (r.Degree >= rLast.Degree && !r.Zero) {
+                const degreeDiff = r.Degree - rLast.Degree;
+                const scale = this.field.multiply(r.getCoefficient(r.Degree), dltInverse);
+                q = q.addOrSubtract(this.field.buildMonomial(degreeDiff, scale));
+                r = r.addOrSubtract(rLast.multiplyByMonomial(degreeDiff, scale));
+                // r.EXE();
+            }
+            s = q.multiply1(sLast).addOrSubtract(sLastLast);
+            t = q.multiply1(tLast).addOrSubtract(tLastLast);
+        }
+        const sigmaTildeAtZero = t.getCoefficient(0);
+        if (sigmaTildeAtZero == 0) {
+            throw new Error('ReedSolomonException sigmaTilde(0) was zero');
+        }
+        const inverse = this.field.inverse(sigmaTildeAtZero);
+        const sigma = t.multiply2(inverse);
+        const omega = r.multiply2(inverse);
+        return new Array(sigma, omega);
+    }
+    findErrorLocations(errorLocator) {
+        // This is a direct application of Chien's search
+        const numErrors = errorLocator.Degree;
+        if (numErrors == 1) {
+            // shortcut
+            return new Array(errorLocator.getCoefficient(1));
+        }
+        const result = new Array(numErrors);
+        let e = 0;
+        for (let i = 1; i < 256 && e < numErrors; i++) {
+            if (errorLocator.evaluateAt(i) == 0) {
+                result[e] = this.field.inverse(i);
+                e++;
+            }
+        }
+        if (e != numErrors) {
+            throw new Error('Error locator degree does not match number of roots');
+        }
+        return result;
+    }
+    findErrorMagnitudes(errorEvaluator, errorLocations, dataMatrix) {
+        // This is directly applying Forney's Formula
+        const s = errorLocations.length;
+        const result = new Array(s);
+        for (let i = 0; i < s; i++) {
+            const xiInverse = this.field.inverse(errorLocations[i]);
+            let denominator = 1;
+            for (let j = 0; j < s; j++) {
+                if (i != j) {
+                    denominator = this.field.multiply(denominator, GF256.addOrSubtract(1, this.field.multiply(errorLocations[j], xiInverse)));
+                }
+            }
+            result[i] = this.field.multiply(errorEvaluator.evaluateAt(xiInverse), this.field.inverse(denominator));
+            // Thanks to sanfordsquires for this fix:
+            if (dataMatrix) {
+                result[i] = this.field.multiply(result[i], xiInverse);
+            }
+        }
+        return result;
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class DataMask000 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return ((i + j) & 0x01) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask001 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return (i & 0x01) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask010 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return j % 3 == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask011 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return (i + j) % 3 == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask100 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return (((this.URShift(i, 1)) + (j / 3)) & 0x01) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+    URShift(number, bits) {
+        if (number >= 0) {
+            return number >> bits;
+        }
+        else {
+            return (number >> bits) + (2 << ~bits);
+        }
+    }
+}
+class DataMask101 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            const temp = i * j;
+            return (temp & 0x01) + (temp % 3) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask110 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            const temp = i * j;
+            return (((temp & 0x01) + (temp % 3)) & 0x01) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask111 {
+    constructor() {
+        this.isMasked = function (i, j) {
+            return ((((i + j) & 0x01) + ((i * j) % 3)) & 0x01) == 0;
+        };
+    }
+    unmaskBitMatrix(bits, dimension) {
+        for (let i = 0; i < dimension; i++) {
+            for (let j = 0; j < dimension; j++) {
+                if (this.isMasked(i, j)) {
+                    bits.flip(j, i);
+                }
+            }
+        }
+    }
+}
+class DataMask {
+    static forReference(reference) {
+        if (reference < 0 || reference > 7) {
+            throw new Error('System.ArgumentException');
+        }
+        return DataMask.DATA_MASKS[reference];
+    }
+}
+DataMask.DATA_MASKS = new Array(new DataMask000(), new DataMask001(), new DataMask010(), new DataMask011(), new DataMask100(), new DataMask101(), new DataMask110(), new DataMask111());
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class BitMatrixParser {
+    constructor(bitmatrix) {
+        const dimension = bitmatrix.Dimension;
+        if (dimension < 21 || (dimension & 0x03) != 1) {
+            throw new Error('Error BitMatrixParser');
+        }
+        this.bitMatrix = bitmatrix;
+    }
+    copyBit(i, j, versionBits) {
+        return this.bitMatrix.get_Renamed(i, j) ? (versionBits << 1) | 0x1 : versionBits << 1;
+    }
+    readFormatInformation() {
+        if (this.parsedFormatInfo != null) {
+            return this.parsedFormatInfo;
+        }
+        // Read top-left format info bits
+        let formatInfoBits = 0;
+        for (let i = 0; i < 6; i++) {
+            formatInfoBits = this.copyBit(i, 8, formatInfoBits);
+        }
+        // .. and skip a bit in the timing pattern ...
+        formatInfoBits = this.copyBit(7, 8, formatInfoBits);
+        formatInfoBits = this.copyBit(8, 8, formatInfoBits);
+        formatInfoBits = this.copyBit(8, 7, formatInfoBits);
+        // .. and skip a bit in the timing pattern ...
+        for (let j = 5; j >= 0; j--) {
+            formatInfoBits = this.copyBit(8, j, formatInfoBits);
+        }
+        this.parsedFormatInfo = FormatInformation.decodeFormatInformation(formatInfoBits);
+        if (this.parsedFormatInfo != null) {
+            return this.parsedFormatInfo;
+        }
+        // Hmm, failed. Try the top-right/bottom-left pattern
+        const dimension = this.bitMatrix.Dimension;
+        formatInfoBits = 0;
+        const iMin = dimension - 8;
+        for (let i = dimension - 1; i >= iMin; i--) {
+            formatInfoBits = this.copyBit(i, 8, formatInfoBits);
+        }
+        for (let j = dimension - 7; j < dimension; j++) {
+            formatInfoBits = this.copyBit(8, j, formatInfoBits);
+        }
+        this.parsedFormatInfo = FormatInformation.decodeFormatInformation(formatInfoBits);
+        if (this.parsedFormatInfo != null) {
+            return this.parsedFormatInfo;
+        }
+        throw new Error('Error readFormatInformation');
+    }
+    readVersion() {
+        if (this.parsedVersion != null) {
+            return this.parsedVersion;
+        }
+        const dimension = this.bitMatrix.Dimension;
+        const provisionalVersion = (dimension - 17) >> 2;
+        if (provisionalVersion <= 6) {
+            return Version.getVersionForNumber(provisionalVersion);
+        }
+        // Read top-right version info: 3 wide by 6 tall
+        let versionBits = 0;
+        const ijMin = dimension - 11;
+        for (let j = 5; j >= 0; j--) {
+            for (let i = dimension - 9; i >= ijMin; i--) {
+                versionBits = this.copyBit(i, j, versionBits);
+            }
+        }
+        this.parsedVersion = Version.decodeVersionInformation(versionBits);
+        if (this.parsedVersion != null && this.parsedVersion.DimensionForVersion == dimension) {
+            return this.parsedVersion;
+        }
+        // Hmm, failed. Try bottom left: 6 wide by 3 tall
+        versionBits = 0;
+        for (let i = 5; i >= 0; i--) {
+            for (let j = dimension - 9; j >= ijMin; j--) {
+                versionBits = this.copyBit(i, j, versionBits);
+            }
+        }
+        this.parsedVersion = Version.decodeVersionInformation(versionBits);
+        if (this.parsedVersion != null && this.parsedVersion.DimensionForVersion == dimension) {
+            return this.parsedVersion;
+        }
+        throw new Error('Error readVersion');
+    }
+    readCodewords() {
+        const formatInfo = this.readFormatInformation();
+        const version = this.readVersion();
+        // Get the data mask for the format used in this QR Code. This will exclude
+        // some bits from reading as we wind through the bit matrix.
+        const dataMask = DataMask.forReference(formatInfo.DataMask);
+        const dimension = this.bitMatrix.Dimension;
+        dataMask.unmaskBitMatrix(this.bitMatrix, dimension);
+        const functionPattern = version.buildFunctionPattern();
+        let readingUp = true;
+        const result = new Array(version.TotalCodewords);
+        let resultOffset = 0;
+        let currentByte = 0;
+        let bitsRead = 0;
+        // Read columns in pairs, from right to left
+        for (let j = dimension - 1; j > 0; j -= 2) {
+            if (j == 6) {
+                // Skip whole column with vertical alignment pattern;
+                // saves time and makes the other code proceed more cleanly
+                j--;
+            }
+            // Read alternatingly from bottom to top then top to bottom
+            for (let count = 0; count < dimension; count++) {
+                const i = readingUp ? dimension - 1 - count : count;
+                for (let col = 0; col < 2; col++) {
+                    // Ignore bits covered by the function pattern
+                    if (!functionPattern.get_Renamed(j - col, i)) {
+                        // Read a bit
+                        bitsRead++;
+                        currentByte <<= 1;
+                        if (this.bitMatrix.get_Renamed(j - col, i)) {
+                            currentByte |= 1;
+                        }
+                        // If we've made a whole byte, save it off
+                        if (bitsRead == 8) {
+                            result[resultOffset++] = currentByte;
+                            bitsRead = 0;
+                            currentByte = 0;
+                        }
+                    }
+                }
+            }
+            readingUp = !readingUp; // readingUp = !readingUp; // switch directions
+        }
+        if (resultOffset != version.TotalCodewords) {
+            throw new Error('Error readCodewords');
+        }
+        return result;
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class DataBlock {
+    constructor(numDataCodewords, codewords) {
+        this.numDataCodewords = numDataCodewords;
+        this.codewords = codewords;
+    }
+    get NumDataCodewords() {
+        return this.numDataCodewords;
+    }
+    get Codewords() {
+        return this.codewords;
+    }
+    static getDataBlocks(rawCodewords, version, ecLevel) {
+        if (rawCodewords.length != version.TotalCodewords) {
+            throw new Error('ArgumentException');
+        }
+        // Figure out the number and size of data blocks used by this version and
+        // error correction level
+        const ecBlocks = version.getECBlocksForLevel(ecLevel);
+        // First count the total number of data blocks
+        let totalBlocks = 0;
+        const ecBlockArray = ecBlocks.getECBlocks();
+        for (let i = 0; i < ecBlockArray.length; i++) {
+            totalBlocks += ecBlockArray[i].Count;
+        }
+        // Now establish DataBlocks of the appropriate size and number of data codewords
+        const result = new Array(totalBlocks);
+        let numResultBlocks = 0;
+        for (let j = 0; j < ecBlockArray.length; j++) {
+            const ecBlock = ecBlockArray[j];
+            for (let i = 0; i < ecBlock.Count; i++) {
+                const numDataCodewords = ecBlock.DataCodewords;
+                const numBlockCodewords = ecBlocks.ECCodewordsPerBlock + numDataCodewords;
+                result[numResultBlocks++] = new DataBlock(numDataCodewords, new Array(numBlockCodewords));
+            }
+        }
+        // All blocks have the same amount of data, except that the last n
+        // (where n may be 0) have 1 more byte. Figure out where these start.
+        const shorterBlocksTotalCodewords = result[0].codewords.length;
+        let longerBlocksStartAt = result.length - 1;
+        while (longerBlocksStartAt >= 0) {
+            const numCodewords = result[longerBlocksStartAt].codewords.length;
+            if (numCodewords == shorterBlocksTotalCodewords) {
+                break;
+            }
+            longerBlocksStartAt--;
+        }
+        longerBlocksStartAt++;
+        const shorterBlocksNumDataCodewords = shorterBlocksTotalCodewords - ecBlocks.ECCodewordsPerBlock;
+        // The last elements of result may be 1 element longer;
+        // first fill out as many elements as all of them have
+        let rawCodewordsOffset = 0;
+        for (let i = 0; i < shorterBlocksNumDataCodewords; i++) {
+            for (let j = 0; j < numResultBlocks; j++) {
+                result[j].codewords[i] = rawCodewords[rawCodewordsOffset++];
+            }
+        }
+        // Fill out the last data block in the longer ones
+        for (let j = longerBlocksStartAt; j < numResultBlocks; j++) {
+            result[j].codewords[shorterBlocksNumDataCodewords] = rawCodewords[rawCodewordsOffset++];
+        }
+        // Now add in error correction blocks
+        const max = result[0].codewords.length;
+        for (let i = shorterBlocksNumDataCodewords; i < max; i++) {
+            for (let j = 0; j < numResultBlocks; j++) {
+                const iOffset = j < longerBlocksStartAt ? i : i + 1;
+                result[j].codewords[iOffset] = rawCodewords[rawCodewordsOffset++];
+            }
+        }
+        return result;
+    }
+}
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+/*
+*
+* Copyright 2007 ZXing authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+class QRCodeDataBlockReader {
+    constructor(blocks, version, numErrorCorrectionCode) {
+        this.blockPointer = 0;
+        this.bitPointer = 7;
+        this.dataLength = 0;
+        this.blocks = blocks;
+        this.numErrorCorrectionCode = numErrorCorrectionCode;
+        if (version <= 9) {
+            this.dataLengthMode = 0;
+        }
+        else if (version >= 10 && version <= 26) {
+            this.dataLengthMode = 1;
+        }
+        else if (version >= 27 && version <= 40) {
+            this.dataLengthMode = 2;
+        }
+    }
+    get DataByte() {
+        const output = new Array();
+        const MODE_NUMBER = 1;
+        const MODE_ROMAN_AND_NUMBER = 2;
+        const MODE_8BIT_BYTE = 4;
+        const MODE_KANJI = 8;
+        do {
+            const mode = this.NextMode();
+            // canvas.println("mode: " + mode);
+            if (mode == 0) {
+                if (output.length > 0) {
+                    break;
+                }
+                else {
+                    throw new Error('Empty data block');
+                }
+            }
+            // if (mode != 1 && mode != 2 && mode != 4 && mode != 8)
+            // 	break;
+            // }
+            if (mode != MODE_NUMBER && mode != MODE_ROMAN_AND_NUMBER && mode != MODE_8BIT_BYTE && mode != MODE_KANJI) {
+                /*					canvas.println("Invalid mode: " + mode);
+                 mode = guessMode(mode);
+                 canvas.println("Guessed mode: " + mode); */
+                throw new Error('Invalid mode: ' + mode + ' in (block:' + this.blockPointer + ' bit:' + this.bitPointer + ')');
+            }
+            const dataLength = this.getDataLength(mode);
+            if (dataLength < 1) {
+                throw new Error('Invalid data length: ' + dataLength);
+            }
+            // canvas.println("length: " + dataLength);
+            switch (mode) {
+                case MODE_NUMBER:
+                    // canvas.println("Mode: Figure");
+                    const temp_str1 = this.getFigureString(dataLength);
+                    let ta1 = new Array(temp_str1.length);
+                    for (let j = 0; j < temp_str1.length; j++) {
+                        ta1[j] = temp_str1.charCodeAt(j);
+                    }
+                    output.push(ta1);
+                    break;
+                case MODE_ROMAN_AND_NUMBER:
+                    // canvas.println("Mode: Roman&Figure");
+                    const temp_str2 = this.getRomanAndFigureString(dataLength);
+                    const ta = new Array(temp_str2.length);
+                    for (let j = 0; j < temp_str2.length; j++) {
+                        ta[j] = temp_str2.charCodeAt(j);
+                    }
+                    output.push(ta);
+                    // output.Write(SystemUtils.ToByteArray(temp_sbyteArray2), 0, temp_sbyteArray2.Length);
+                    break;
+                case MODE_8BIT_BYTE:
+                    // canvas.println("Mode: 8bit Byte");
+                    // sbyte[] temp_sbyteArray3;
+                    const temp_sbyteArray3 = this.get8bitByteArray(dataLength);
+                    output.push(temp_sbyteArray3);
+                    // output.Write(SystemUtils.ToByteArray(temp_sbyteArray3), 0, temp_sbyteArray3.Length);
+                    break;
+                case MODE_KANJI:
+                    // canvas.println("Mode: Kanji");
+                    // sbyte[] temp_sbyteArray4;
+                    // temp_sbyteArray4 = SystemUtils.ToSByteArray(SystemUtils.ToByteArray(getKanjiString(dataLength)));
+                    // output.Write(SystemUtils.ToByteArray(temp_sbyteArray4), 0, temp_sbyteArray4.Length);
+                    const temp_str = this.getKanjiString(dataLength);
+                    output.push(temp_str);
+                    break;
+            }
+            //
+            // canvas.println("DataLength: " + dataLength);
+            // Console.out.println(dataString);
+        } while (true);
+        return output;
+    }
+    getNextBits(numBits) {
+        let bits = 0;
+        if (numBits < this.bitPointer + 1) {
+            // next word fits into current data block
+            let mask = 0;
+            for (let i = 0; i < numBits; i++) {
+                mask += (1 << i);
+            }
+            mask <<= (this.bitPointer - numBits + 1);
+            bits = (this.blocks[this.blockPointer] & mask) >> (this.bitPointer - numBits + 1);
+            this.bitPointer -= numBits;
+            return bits;
+        }
+        else if (numBits < this.bitPointer + 1 + 8) {
+            // next word crosses 2 data blocks
+            let mask1 = 0;
+            for (let i = 0; i < this.bitPointer + 1; i++) {
+                mask1 += (1 << i);
+            }
+            bits = (this.blocks[this.blockPointer] & mask1) << (numBits - (this.bitPointer + 1));
+            this.blockPointer++;
+            bits += ((this.blocks[this.blockPointer]) >> (8 - (numBits - (this.bitPointer + 1))));
+            this.bitPointer = this.bitPointer - numBits % 8;
+            if (this.bitPointer < 0) {
+                this.bitPointer = 8 + this.bitPointer;
+            }
+            return bits;
+        }
+        else if (numBits < this.bitPointer + 1 + 16) {
+            // next word crosses 3 data blocks
+            let mask1 = 0; // mask of first block
+            let mask3 = 0; // mask of 3rd block
+            // bitPointer + 1 : number of bits of the 1st block
+            // 8 : number of the 2nd block (note that use already 8bits because next word uses 3 data blocks)
+            // numBits - (bitPointer + 1 + 8) : number of bits of the 3rd block
+            for (let i = 0; i < this.bitPointer + 1; i++) {
+                mask1 += (1 << i);
+            }
+            const bitsFirstBlock = (this.blocks[this.blockPointer] & mask1) << (numBits - (this.bitPointer + 1));
+            this.blockPointer++;
+            const bitsSecondBlock = this.blocks[this.blockPointer] << (numBits - (this.bitPointer + 1 + 8));
+            this.blockPointer++;
+            for (let i = 0; i < numBits - (this.bitPointer + 1 + 8); i++) {
+                mask3 += (1 << i);
+            }
+            mask3 <<= 8 - (numBits - (this.bitPointer + 1 + 8));
+            const bitsThirdBlock = (this.blocks[this.blockPointer] & mask3) >> (8 - (numBits - (this.bitPointer + 1 + 8)));
+            bits = bitsFirstBlock + bitsSecondBlock + bitsThirdBlock;
+            this.bitPointer = this.bitPointer - (numBits - 8) % 8;
+            if (this.bitPointer < 0) {
+                this.bitPointer = 8 + this.bitPointer;
+            }
+            return bits;
+        }
+        else {
+            return 0;
+        }
+    }
+    NextMode() {
+        if ((this.blockPointer > this.blocks.length - this.numErrorCorrectionCode - 2)) {
+            return 0;
+        }
+        else {
+            return this.getNextBits(4);
+        }
+    }
+    getDataLength(modeIndicator) {
+        let index = 0;
+        while (true) {
+            if ((modeIndicator >> index) == 1) {
+                break;
+            }
+            index++;
+        }
+        return this.getNextBits(QRCodeDataBlockReader.sizeOfDataLengthInfo[this.dataLengthMode][index]);
+    }
+    getRomanAndFigureString(dataLength) {
+        let length = dataLength;
+        let intData = 0;
+        let strData = '';
+        const tableRomanAndFigure = new Array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', '$', '%', '*', '+', '-', '.', '/', ':');
+        do {
+            if (length > 1) {
+                intData = this.getNextBits(11);
+                const firstLetter = Math.floor(intData / 45);
+                const secondLetter = intData % 45;
+                strData += tableRomanAndFigure[firstLetter];
+                strData += tableRomanAndFigure[secondLetter];
+                length -= 2;
+            }
+            else if (length == 1) {
+                intData = this.getNextBits(6);
+                strData += tableRomanAndFigure[intData];
+                length -= 1;
+            }
+        } while (length > 0);
+        return strData;
+    }
+    getFigureString(dataLength) {
+        let length = dataLength;
+        let intData = 0;
+        let strData = '';
+        do {
+            if (length >= 3) {
+                intData = this.getNextBits(10);
+                if (intData < 100) {
+                    strData += '0';
+                }
+                if (intData < 10) {
+                    strData += '0';
+                }
+                length -= 3;
+            }
+            else if (length == 2) {
+                intData = this.getNextBits(7);
+                if (intData < 10) {
+                    strData += '0';
+                }
+                length -= 2;
+            }
+            else if (length == 1) {
+                intData = this.getNextBits(4);
+                length -= 1;
+            }
+            strData += intData;
+        } while (length > 0);
+        return strData;
+    }
+    get8bitByteArray(dataLength) {
+        let length = dataLength;
+        let intData = 0;
+        const output = new Array();
+        do {
+            intData = this.getNextBits(8);
+            output.push(intData);
+            length--;
+        } while (length > 0);
+        return output;
+    }
+    getKanjiString(dataLength) {
+        let length = dataLength;
+        let intData = 0;
+        let unicodeString = '';
+        do {
+            intData = this.getNextBits(13);
+            const lowerByte = intData % 0xC0;
+            const higherByte = intData / 0xC0;
+            const tempWord = (higherByte << 8) + lowerByte;
+            let shiftjisWord = 0;
+            if (tempWord + 0x8140 <= 0x9FFC) {
+                // between 8140 - 9FFC on Shift_JIS character set
+                shiftjisWord = tempWord + 0x8140;
+            }
+            else {
+                // between E040 - EBBF on Shift_JIS character set
+                shiftjisWord = tempWord + 0xC140;
+            }
+            // var tempByte = new Array(0,0);
+            // tempByte[0] = (sbyte) (shiftjisWord >> 8);
+            // tempByte[1] = (sbyte) (shiftjisWord & 0xFF);
+            // unicodeString += new String(SystemUtils.ToCharArray(SystemUtils.ToByteArray(tempByte)));
+            unicodeString += String.fromCharCode(shiftjisWord);
+            length--;
+        } while (length > 0);
+        return unicodeString;
+    }
+}
+QRCodeDataBlockReader.sizeOfDataLengthInfo = [[10, 9, 8, 8], [12, 11, 16, 10], [14, 13, 16, 12]];
+
+/*
+  Ported to JavaScript by Lazar Laszlo 2011
+
+  lazarsoft@gmail.com, www.lazarsoft.info
+
+*/
+class Decoder {
+    constructor() {
+        this.rsDecoder = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);
+        this.decode = function (bits) {
+            const parser = new BitMatrixParser(bits);
+            const version = parser.readVersion();
+            const ecLevel = parser.readFormatInformation().ErrorCorrectionLevel;
+            // Read codewords
+            const codewords = parser.readCodewords();
+            // Separate into data blocks
+            const dataBlocks = DataBlock.getDataBlocks(codewords, version, ecLevel);
+            // Count total number of data bytes
+            let totalBytes = 0;
+            for (let i = 0; i < dataBlocks.length; i++) {
+                totalBytes += dataBlocks[i].NumDataCodewords;
+            }
+            const resultBytes = new Array(totalBytes);
+            let resultOffset = 0;
+            // Error-correct and copy data blocks together into a stream of bytes
+            for (let j = 0; j < dataBlocks.length; j++) {
+                const dataBlock = dataBlocks[j];
+                const codewordBytes = dataBlock.Codewords;
+                const numDataCodewords = dataBlock.NumDataCodewords;
+                this.correctErrors(codewordBytes, numDataCodewords);
+                for (let i = 0; i < numDataCodewords; i++) {
+                    resultBytes[resultOffset++] = codewordBytes[i];
+                }
+            }
+            // Decode the contents of that stream of bytes
+            const reader = new QRCodeDataBlockReader(resultBytes, version.VersionNumber, ecLevel.Bits);
+            return reader;
+            // return DecodedBitStreamParser.decode(resultBytes, version, ecLevel);
+        };
+    }
+    correctErrors(codewordBytes, numDataCodewords) {
+        const numCodewords = codewordBytes.length;
+        // First read into an array of ints
+        const codewordsInts = new Array(numCodewords);
+        for (let i = 0; i < numCodewords; i++) {
+            codewordsInts[i] = codewordBytes[i] & 0xFF;
+        }
+        const numECCodewords = codewordBytes.length - numDataCodewords;
+        try {
+            this.rsDecoder.decode(codewordsInts, numECCodewords);
+            // var corrector = new ReedSolomon(codewordsInts, numECCodewords);
+            // corrector.correct();
+        }
+        catch (rse) {
+            throw rse;
+        }
+        // Copy back into array of bytes -- only need to worry about the bytes that were data
+        // We don't care about errors in the error-correction codewords
+        for (let i = 0; i < numDataCodewords; i++) {
+            codewordBytes[i] = codewordsInts[i];
+        }
+    }
+}
+
+/*
+   Copyright 2011 Lazar Laszlo (lazarsoft@gmail.com, www.lazarsoft.info)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+class QRCode {
+    constructor() {
+        this.debug = false;
+        this.maxImgSize = 1024 * 1024;
+        this.sizeOfDataLengthInfo = [[10, 9, 8, 8], [12, 11, 16, 10], [14, 13, 16, 12]];
+    }
+    decode(canvas) {
+        const context = canvas.getContext('2d');
+        this.width = canvas.width;
+        this.height = canvas.height;
+        this.imagedata = context.getImageData(0, 0, this.width, this.height);
+        this.result = this.process(context);
+        if (this.myCallback != null) {
+            this.myCallback(this.result);
+        }
+        return this.result;
+    }
+    process(context) {
+        const start = new Date().getTime();
+        const image = this.grayScaleToBitmap(this.grayscale());
+        if (this.debug) {
+            for (let y = 0; y < this.height; y++) {
+                for (let x = 0; x < this.width; x++) {
+                    const point = (x * 4) + (y * this.width * 4);
+                    this.imagedata.data[point] = image[x + y * this.width] ? 0 : 0;
+                    this.imagedata.data[point + 1] = image[x + y * this.width] ? 0 : 0;
+                    this.imagedata.data[point + 2] = image[x + y * this.width] ? 255 : 0;
+                }
+            }
+            context.putImageData(this.imagedata, 0, 0);
+        }
+        const detector = new Detector(image, this.imagedata, this.width, this.height);
+        const qRCodeMatrix = detector.detect();
+        if (this.debug) {
+            context.putImageData(this.imagedata, 0, 0);
+        }
+        const decoder = new Decoder();
+        const reader = decoder.decode(qRCodeMatrix.bits);
+        const data = reader.DataByte;
+        let str = '';
+        for (let i = 0; i < data.length; i++) {
+            for (let j = 0; j < data[i].length; j++) {
+                str += String.fromCharCode(data[i][j]);
+            }
+        }
+        const end = new Date().getTime();
+        const time = end - start;
+        console.log(time);
+        return str;
+    }
+    grayScaleToBitmap(grayScale) {
+        const middle = this.getMiddleBrightnessPerArea(grayScale);
+        const sqrtNumArea = middle.length;
+        const areaWidth = Math.floor(this.width / sqrtNumArea);
+        const areaHeight = Math.floor(this.height / sqrtNumArea);
+        const bitmap = new Array(this.height * this.width);
+        for (let ay = 0; ay < sqrtNumArea; ay++) {
+            for (let ax = 0; ax < sqrtNumArea; ax++) {
+                for (let dy = 0; dy < areaHeight; dy++) {
+                    for (let dx = 0; dx < areaWidth; dx++) {
+                        bitmap[areaWidth * ax + dx + (areaHeight * ay + dy) * this.width] = (grayScale[areaWidth * ax + dx + (areaHeight * ay + dy) * this.width] < middle[ax][ay]) ? true : false;
+                    }
+                }
+            }
+        }
+        return bitmap;
+    }
+    grayscale() {
+        const ret = new Array(this.width * this.height);
+        for (let y = 0; y < this.height; y++) {
+            for (let x = 0; x < this.width; x++) {
+                const gray = this.getPixel(x, y);
+                ret[x + y * this.width] = gray;
+            }
+        }
+        return ret;
+    }
+    getPixel(x, y) {
+        if (this.width < x) {
+            throw new Error('point error');
+        }
+        if (this.height < y) {
+            throw new Error('point error');
+        }
+        const point = (x * 4) + (y * this.width * 4);
+        const p = (this.imagedata.data[point] * 33 + this.imagedata.data[point + 1] * 34 + this.imagedata.data[point + 2] * 33) / 100;
+        return p;
+    }
+    getMiddleBrightnessPerArea(image) {
+        const numSqrtArea = 4;
+        // obtain middle brightness((min + max) / 2) per area
+        const areaWidth = Math.floor(this.width / numSqrtArea);
+        const areaHeight = Math.floor(this.height / numSqrtArea);
+        const minmax = new Array(numSqrtArea);
+        for (let i = 0; i < numSqrtArea; i++) {
+            minmax[i] = new Array(numSqrtArea);
+            for (let i2 = 0; i2 < numSqrtArea; i2++) {
+                minmax[i][i2] = new Array(0, 0);
+            }
+        }
+        for (let ay = 0; ay < numSqrtArea; ay++) {
+            for (let ax = 0; ax < numSqrtArea; ax++) {
+                minmax[ax][ay][0] = 0xFF;
+                for (let dy = 0; dy < areaHeight; dy++) {
+                    for (let dx = 0; dx < areaWidth; dx++) {
+                        const target = image[areaWidth * ax + dx + (areaHeight * ay + dy) * this.width];
+                        if (target < minmax[ax][ay][0]) {
+                            minmax[ax][ay][0] = target;
+                        }
+                        if (target > minmax[ax][ay][1]) {
+                            minmax[ax][ay][1] = target;
+                        }
+                    }
+                }
+                // minmax[ax][ay][0] = (minmax[ax][ay][0] + minmax[ax][ay][1]) / 2;
+            }
+        }
+        const middle = new Array(numSqrtArea);
+        for (let i3 = 0; i3 < numSqrtArea; i3++) {
+            middle[i3] = new Array(numSqrtArea);
+        }
+        for (let ay = 0; ay < numSqrtArea; ay++) {
+            for (let ax = 0; ax < numSqrtArea; ax++) {
+                middle[ax][ay] = Math.floor((minmax[ax][ay][0] + minmax[ax][ay][1]) / 2);
+                // Console.out.print(middle[ax][ay] + ",");
+            }
+            // Console.out.println("");
+        }
+        // Console.out.println("");
+        return middle;
+    }
+}
+//
+//
+// Array.prototype.remove = function(from, to) {
+//   var rest = this.slice((to || from) + 1 || this.length);
+//   this.length = from < 0 ? this.length + from : from;
+//   return this.push.apply(this, rest);
+// };
+
+var State;
+(function (State) {
+    State["NotSupported"] = "NotSupported";
+    State["SelectCamera"] = "SelectCamera";
+    State["Scan"] = "Scan";
+})(State || (State = {}));
+let QrScannerComponent = class QrScannerComponent {
+    constructor(renderer) {
+        this.renderer = renderer;
+        this.debug = false;
+        this.updateTime = 300;
+        this.showCanvas = false;
+        this.state = State.SelectCamera;
+        this.State = State;
+        this.texts = {
+            NotSupportedHTML: `You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.`,
+            DeviceDefaultPrefix: `Camera`,
+            StopCameraText: `Stop Camera`,
+            OpenButtonText: `Select QR Code File...`
+        };
+        this.allowUpload = false;
+        this.disableScan = false;
+        this.capturedQr = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.error = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.chooseCamera = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.cameraList = [];
+        this.canvasHidden = true;
+        this.canvasWidth = this.canvasWidth || Math.min(window.innerWidth, 640);
+        this.canvasHeight = this.canvasHeight || Math.min(window.innerHeight, 480);
+    }
+    get isCanvasSupported() {
+        const canvas = this.renderer.createElement('canvas');
+        return !!(canvas.getContext && canvas.getContext('2d'));
+    }
+    ngOnInit() {
+    }
+    onUploadError(error) {
+        this.error.emit(error);
+    }
+    ngOnDestroy() {
+        this.chooseCamera$.unsubscribe();
+        this.stopScanning();
+    }
+    ngAfterViewInit() {
+        if (this.debug) {
+            console.log('[QrScanner] ViewInit, isSupported: ', this.isCanvasSupported);
+        }
+        if (this.isCanvasSupported) {
+            this.state = State.SelectCamera;
+            this.gCtx = this.qrCanvas.nativeElement.getContext('2d');
+            this.gCtx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+            this.qrCode = new QRCode();
+            if (this.debug) {
+                this.qrCode.debug = true;
+            }
+            this.qrCode.myCallback = (decoded) => this.QrDecodeCallback(decoded);
+        }
+        else {
+            this.state = State.NotSupported;
+        }
+        this.chooseCamera$ = this.chooseCamera.subscribe((camera) => this.useDevice(camera));
+        this.getMediaDevices().then(devices => {
+            const mediaVideoKind = 'videoinput';
+            this.cameraList = devices.filter((d) => d && d.kind === mediaVideoKind);
+        });
+    }
+    stop() {
+        this.stopScanning();
+        this.state = State.SelectCamera;
+    }
+    getLabel(device, index) {
+        const label = device.label;
+        if (!(label.trim().length > 0)) {
+            return `${this.texts.DeviceDefaultPrefix} ${index}`;
+        }
+        return label;
+    }
+    changeCamera(device) {
+        try {
+            this.chooseCamera.next(device);
+            this.state = State.Scan;
+        }
+        catch (err) {
+            this.error.emit(err);
+        }
+    }
+    startScanning(device) {
+        try {
+            this.useDevice(device);
+        }
+        catch (error) {
+            this.error.emit(error);
+        }
+    }
+    stopScanning() {
+        if (this.captureTimeout) {
+            clearTimeout(this.captureTimeout);
+            this.captureTimeout = 0;
+        }
+        this.canvasHidden = false;
+        const stream = this.stream && this.stream.getTracks().length && this.stream;
+        if (stream) {
+            stream.getTracks().forEach(track => track.enabled && track.stop());
+            this.stream = null;
+        }
+    }
+    getMediaDevices() {
+        try {
+            if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+                return Promise.resolve([]);
+            }
+            return navigator.mediaDevices.enumerateDevices()
+                .then((devices) => devices)
+                .catch((error) => {
+                if (this.debug) {
+                    console.warn('Error', error);
+                }
+                return [];
+            });
+        }
+        catch (err) {
+            this.error.emit(err);
+        }
+    }
+    QrDecodeCallback(decoded) {
+        this.stopScanning();
+        this.capturedQr.next(decoded);
+        this.state = State.SelectCamera;
+    }
+    scanned(decoded) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.stopScanning();
+            this.capturedQr.next(decoded);
+            this.state = State.SelectCamera;
+        });
+    }
+    captureToCanvas() {
+        try {
+            this.gCtx.drawImage(this.videoElement, 0, 0, this.canvasWidth, this.canvasHeight);
+            this.qrCode.decode(this.qrCanvas.nativeElement);
+        }
+        catch (e) {
+            this.error.emit(e);
+            if (this.debug) {
+                console.log('[QrScanner] Thrown', e);
+            }
+            if (!this.stream) {
+                return;
+            }
+            this.captureTimeout = setTimeout(() => this.captureToCanvas(), this.updateTime);
+        }
+    }
+    setStream(stream) {
+        this.canvasHidden = true;
+        this.gCtx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
+        this.stream = stream;
+        this.videoElement.srcObject = stream;
+        this.captureTimeout = setTimeout(() => this.captureToCanvas(), this.updateTime);
+    }
+    useDevice(_device) {
+        try {
+            const _navigator = navigator;
+            if (this.captureTimeout) {
+                this.stopScanning();
+            }
+            if (!this.videoElement) {
+                this.videoElement = this.renderer.createElement('video');
+                this.videoElement.setAttribute('autoplay', 'true');
+                this.videoElement.setAttribute('muted', 'true');
+                this.renderer.appendChild(this.videoWrapper.nativeElement, this.videoElement);
+            }
+            const self = this;
+            let constraints;
+            if (_device) {
+                constraints = { audio: false, video: { deviceId: _device.deviceId } };
+            }
+            else {
+                constraints = { audio: false, video: true };
+            }
+            _navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+                self.setStream(stream);
+            }).catch(function (err) {
+                return self.debug && console.warn('Error', err);
+            });
+        }
+        catch (err) {
+            this.error.emit(err);
+        }
+    }
+};
+QrScannerComponent.ɵfac = function QrScannerComponent_Factory(t) { return new (t || QrScannerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"])); };
+QrScannerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: QrScannerComponent, selectors: [["qr-scanner"]], viewQuery: function QrScannerComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c1, 1);
+    } if (rf & 2) {
+        let _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.videoWrapper = _t.first);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.qrCanvas = _t.first);
+    } }, inputs: { texts: "texts", allowUpload: "allowUpload", disableScan: "disableScan", buttonClass: "buttonClass" }, outputs: { capturedQr: "capturedQr", error: "error" }, decls: 12, vars: 21, consts: [[2, "text-align", "-webkit-center"], [3, "ngStyle"], [3, "innerHTML"], ["class", "cameraButtonDiv", 3, "ngStyle", 4, "ngIf"], [1, "cameraButtonDiv"], [3, "ngClass", "click"], ["videoWrapper", ""], [3, "ngStyle", "hidden", "width", "height"], ["qrCanvas", ""], [1, "cameraButtonDiv", 3, "ngStyle"], [1, "buttonDiv"], [3, "title", "buttonClass", "error", "valueChange"], [4, "ngIf"], ["class", "buttonDiv", 4, "ngFor", "ngForOf"]], template: function QrScannerComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "p", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, QrScannerComponent_div_3_Template, 4, 6, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "button", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QrScannerComponent_Template_button_click_6_listener() { return ctx.stop(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "div", 1, 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "canvas", 7, 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](11, _c2, ctx.state === ctx.State.NotSupported ? "block" : "none"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("innerHTML", ctx.texts.NotSupportedHTML, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeHtml"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.allowUpload);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](13, _c2, ctx.state === ctx.State.Scan ? "block" : "none"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", ctx.buttonClass);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.texts.StopCameraText, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](15, _c3, ctx.canvasWidth, ctx.canvasHeight));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](18, _c3, ctx.canvasWidth, ctx.canvasHeight))("hidden", true)("width", ctx.canvasWidth)("height", ctx.canvasHeight);
+    } }, directives: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], QrUploadComponent, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]]; }, styles: [":host video {height: auto; width: 100%;}", ":host .mirrored { transform: rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg); }", ":host {}", ".cameraButtonDiv { position: absolute;align-content: center;width: 100%;padding: 5px 0px; z-index: 1000; }", ".buttonDiv { margin: 20px 0px;}"], encapsulation: 2 });
+QrScannerComponent.ctorParameters = () => [
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] }
+];
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrScannerComponent.prototype, "texts", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrScannerComponent.prototype, "buttonClass", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrScannerComponent.prototype, "allowUpload", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrScannerComponent.prototype, "disableScan", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], QrScannerComponent.prototype, "capturedQr", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], QrScannerComponent.prototype, "error", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('videoWrapper', { static: false })
+], QrScannerComponent.prototype, "videoWrapper", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('qrCanvas', { static: false })
+], QrScannerComponent.prototype, "qrCanvas", void 0);
+
+let QrUploadComponent = class QrUploadComponent {
+    constructor() {
+        this.qrCode = new QRCode();
+        this.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.error = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.acceptedMimeTypes = [
+            'image/gif',
+            'image/jpeg',
+            'image/png'
+        ];
+        this.img = new Image();
+    }
+    set value(value) {
+        this._value = value;
+        this.valueChange.emit(value);
+    }
+    get value() {
+        return this._value;
+    }
+    pick(evt) {
+        const file = evt.target.files[0];
+        if (!file) {
+            return;
+        }
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const target = event.target;
+            const url = target.result;
+            this.read(url);
+        };
+        reader.readAsDataURL(file);
+    }
+    read(url) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.img.onload = () => {
+                try {
+                    const qrCanvas = document.createElement('canvas');
+                    qrCanvas.width = this.img.width;
+                    qrCanvas.height = this.img.height;
+                    const gCtx = qrCanvas.getContext('2d');
+                    gCtx.drawImage(this.img, 0, 0);
+                    const decoded = this.qrCode.decode(qrCanvas);
+                    this.value = decoded;
+                }
+                catch (error) {
+                    this.error.emit(error);
+                    this.value = undefined;
+                }
+            };
+            this.img.src = url;
+        });
+    }
+};
+QrUploadComponent.ɵfac = function QrUploadComponent_Factory(t) { return new (t || QrUploadComponent)(); };
+QrUploadComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: QrUploadComponent, selectors: [["app-qrupload"]], inputs: { buttonClass: "buttonClass", title: "title" }, outputs: { valueChange: "valueChange", error: "error" }, decls: 4, vars: 2, consts: [["for", "qr_upload", 3, "ngClass"], ["type", "file", "name", "qr_upload", "id", "qr_upload", "accept", "image/*", 1, "upload", 3, "change"]], template: function QrUploadComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "label", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "input", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("change", function QrUploadComponent_Template_input_change_3_listener($event) { return ctx.pick($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", ctx.buttonClass);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", ctx.title, "");
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"]], styles: [".upload{display:none}"], encapsulation: 2 });
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], QrUploadComponent.prototype, "valueChange", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], QrUploadComponent.prototype, "error", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrUploadComponent.prototype, "buttonClass", void 0);
+Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], QrUploadComponent.prototype, "title", void 0);
+
+var NgQrScannerModule_1;
+let NgQrScannerModule = NgQrScannerModule_1 = class NgQrScannerModule {
+    static forRoot() {
+        return {
+            ngModule: NgQrScannerModule_1
+        };
+    }
+};
+NgQrScannerModule.ɵfac = function NgQrScannerModule_Factory(t) { return new (t || NgQrScannerModule)(); };
+NgQrScannerModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: NgQrScannerModule });
+NgQrScannerModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+        ]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](QrScannerComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'qr-scanner',
+                template: `
+    <div style="text-align: -webkit-center;">
+      <div [ngStyle]="{display: state === State.NotSupported ? 'block' : 'none'}">
+        <p [innerHTML]="texts.NotSupportedHTML"></p>
+      </div>
+      <div class="cameraButtonDiv" [ngStyle]="{display: state === State.SelectCamera ? 'block' : 'none'}" *ngIf="allowUpload">
+        <div class="buttonDiv">
+          <app-qrupload [title]="texts.OpenButtonText"
+          (error)="onUploadError($event)" (valueChange)="scanned($event)" [buttonClass]='buttonClass'></app-qrupload>
+        </div>
+        <div *ngIf="!disableScan">
+          <div *ngFor="let device of cameraList; let i = index;" class="buttonDiv">
+            <button (click)="changeCamera(device)" [ngClass]="buttonClass">
+              {{ getLabel(device, i + 1) }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div [ngStyle]="{display: state === State.Scan ? 'block' : 'none'}">
+        <div class="cameraButtonDiv">
+          <button (click)="stop()" [ngClass]="buttonClass">
+            {{ texts.StopCameraText }}
+          </button>
+        </div>
+        <div #videoWrapper [ngStyle]="{'maxWidth.px': canvasWidth, 'maxHeight.px': canvasHeight}">
+        </div>
+        <canvas #qrCanvas
+        [ngStyle]="{'maxWidth.px': canvasWidth, 'maxHeight.px': canvasHeight}"
+        [hidden]="true" [width]="canvasWidth" [height]="canvasHeight"></canvas>
+      </div>
+    </div>
+      `,
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+                styles: [':host video {height: auto; width: 100%;}',
+                    ':host .mirrored { transform: rotateY(180deg); -webkit-transform:rotateY(180deg); -moz-transform:rotateY(180deg); }',
+                    ':host {}',
+                    '.cameraButtonDiv { position: absolute;align-content: center;width: 100%;padding: 5px 0px; z-index: 1000; }',
+                    '.buttonDiv { margin: 20px 0px;}']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"] }]; }, { texts: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], allowUpload: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], disableScan: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], capturedQr: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }], error: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }], buttonClass: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], videoWrapper: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['videoWrapper', { static: false }]
+        }], qrCanvas: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['qrCanvas', { static: false }]
+        }] }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](QrUploadComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-qrupload',
+                template: "<label for=\"qr_upload\" [ngClass]=\"buttonClass\">\n  {{ title }}</label>\n<br>\n<input type=\"file\" name=\"qr_upload\" id=\"qr_upload\" class=\"upload\" accept=\"image/*\" (change)=\"pick($event)\" />",
+                encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].None,
+                styles: [".upload{display:none}"]
+            }]
+    }], function () { return []; }, { valueChange: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }], error: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+        }], buttonClass: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }], title: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](NgQrScannerModule, { declarations: function () { return [QrScannerComponent, QrUploadComponent]; }, imports: function () { return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]]; }, exports: function () { return [QrScannerComponent]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](NgQrScannerModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+        args: [{
+                imports: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+                ],
+                declarations: [QrScannerComponent, QrUploadComponent],
+                exports: [QrScannerComponent]
+            }]
+    }], null, null); })();
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+//# sourceMappingURL=ngx-qr.js.map
+
+/***/ }),
+
 /***/ "WyKG":
 /*!******************************************************************!*\
   !*** ./node_modules/rxjs/_esm2015/internal/util/toSubscriber.js ***!
@@ -57815,6 +61228,260 @@ class SkipUntilSubscriber extends _innerSubscribe__WEBPACK_IMPORTED_MODULE_0__["
     }
 }
 //# sourceMappingURL=skipUntil.js.map
+
+/***/ }),
+
+/***/ "vwVJ":
+/*!*************************************************************!*\
+  !*** ./node_modules/ngx-qr/node_modules/tslib/tslib.es6.js ***!
+  \*************************************************************/
+/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__createBinding", function() { return __createBinding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function() { return __classPrivateFieldGet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function() { return __classPrivateFieldSet; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __createBinding(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
+function __classPrivateFieldGet(receiver, privateMap) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to get private field on non-instance");
+    }
+    return privateMap.get(receiver);
+}
+
+function __classPrivateFieldSet(receiver, privateMap, value) {
+    if (!privateMap.has(receiver)) {
+        throw new TypeError("attempted to set private field on non-instance");
+    }
+    privateMap.set(receiver, value);
+    return value;
+}
+
 
 /***/ }),
 
